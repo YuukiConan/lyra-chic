@@ -142,30 +142,6 @@
         "comment_count": 0
     },
     {
-        "name": "Ercila Mai Asherayuku",
-        "description": "Graphic designer <br> <br>An expert in drawing, Ercila won first place in the SDN Pare 2 drawing contest in 2022. Some things are meant to be felt; she's express it deeply, quietly, and completely. <br><br>Ercila was included in keyzarichi.org as a Storyteller member because of her love story with Yuuki, a main developer of Keyza Richi, which is often associated with the love story between Pisces (Yuuki) and Scorpio (Ercila); described as a love story that is deep, intense, and full of emotional depth. Ercila's presence in the team adds a unique perspective and creative energy that helps bring the website to life with visually stunning graphics and captivating content. <br><br>In addition to her work as a graphic designer, Ercila is also known for her quiet and introspective nature, often expressing herself through her art in a way that resonates deeply with others. Her talent and creativity have made her an invaluable member of the keyzarichi.org team, where she contributes her unique perspective and creative energy to help bring the website to life with visually stunning graphics and captivating content.",
-        "nickname": "Ercila &bull; Cila",
-        "image": "./assets/image/ercila/ercila.webp",
-        "id": "ercila",
-        "instagram": [
-            "wa0_fless"
-        ],
-        "like_count": 0,
-        "comment_count": 0
-    },
-    {
-        "name": "Deandra Aliena Putranto",
-        "description": "Ercila’s trusted companion in the world of imagination; Dea helps Ercila transform art into unparalleled creativity. Just enough to keep things interesting. <br><br>Deandra was included in keyzarichi.org as a Storyteller member because she has a close friendship with Ercila, and also a 'mediator' in the relationship between Ercila and Yuuki. Despite their problems, Deandra is always there to support and encourage Ercila, helping her navigate the complexities of her relationship with Yuuki and providing a source of comfort and understanding. <br><br>In other side, Deandra is also a talented artist in her own right, with a unique perspective and creative energy that helps bring the website to life with visually stunning graphics and captivating content.",
-        "nickname": "Deandra",
-        "image": "./assets/image/deandra/dea.webp",
-        "id": "deandra",
-        "instagram": [
-            "who_itsme3"
-        ],
-        "like_count": 0,
-        "comment_count": 0
-    },
-    {
         "name": "Ally Li",
         "description": "A college student and contributor to Keyza Richi who is passionate about UX design and web development. <br><br>She now lives in Boston, a city in New York, United States, and focuses on the global interactive coding community, Codédex.",
         "nickname": "Ally",
@@ -232,36 +208,12 @@
         ],
         "like_count": 0
     }, {
-        "name": "Crescentia Flos Carmeli P. S.",
-        "description": "Ercila’s trusted companion in the world of imagination; Flos helps Ercila transform art into unparalleled creativity. <br><br>More about Flos is coming soon... but one thing is for sure, Flos is a talented artist in her own right, with a unique perspective and creative energy that helps bring the website to life with visually stunning graphics and captivating content.",
-        "nickname": "Flos",
-        "aliases": "",
-        "image": "./assets/image/member_avatar/flos.webp",
-        "id": "flos",
-        "instagram": [
-            
-        ],
-        "like_count": 0
-    }
-    , {
         "name": "Lilis Ambarwati",
         "description": "Amberly is an influencer or content creator who has an adventurous spirit and loves the world of photography and personal career. <br><br>Amberly's passion for photography and content creation has led her to explore various creative avenues, sharing her unique perspective and captivating content with her audience. With her adventurous spirit and love for storytelling, Amberly continues to inspire others through her work, making her a valuable member of the keyzarichi.org team.",
         "nickname": "Amberly &bull; Ambar",
         "aliases": "",
         "image": "./assets/image/member_avatar/ambar.webp",
         "id": "amberly",
-        "instagram": [
-            
-        ],
-        "like_count": 0
-    }
-    , {
-        "name": "Aulia Bikrun Fayha",
-        "description": "Ercila's best friend. <br><br>The story about Fayha is still being written... we just make she being mysterious in this website.",
-        "nickname": "Fayha",
-        "aliases": "",
-        "image": "./assets/logo/keyzarichi.org_scriptsimple-200w.webp",
-        "id": "fayha",
         "instagram": [
             
         ],
