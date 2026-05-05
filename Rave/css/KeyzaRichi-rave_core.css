@@ -4825,7 +4825,7 @@ button i,
     width: fit-content;
     height: 50px;
     align-items: center;
-    left: -8px;
+    left: 0px;
 }
 
 header:has(.nav-pane:not(.hidden)) :is(.product, .logo) {
@@ -4838,7 +4838,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .logo {
-    width: 135px !important;
+    width: 140px !important;
     height: 55px !important;
     aspect-ratio: 1 / 1;
     object-fit: cover;
