@@ -339,7 +339,7 @@ html[data-theme="dark"] {
     --secondary-color: rgb(122, 122, 122);
     --background-color: rgb(10, 10, 10);
     --surface-color: rgb(15, 15, 15);
-    --on-surface-color: rgb(156, 156, 156);
+    --on-surface-color: rgb(196, 196, 196);
     --bg-color-value: 20, 20, 20;
     --text-color: white;
     color-scheme: dark;
@@ -1245,7 +1245,10 @@ header.no-blend .equal div {
     font-size: 24px;
     padding: 8px;
 }
-
+.category:hover {
+    background-color: var(--surface-color);
+    border-color: var(--primary-color);
+}
 a,
 .link {
     position: relative;
@@ -5606,7 +5609,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 
 
 .content-item:hover .menuButton  {
-    color: var(--on-surface-color);
+    color: rgb(100, 100, 100)
 }
 .content-item .menuButton:hover {
     color: var(--text-color);
