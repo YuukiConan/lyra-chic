@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (searchText) {
         prevtext.textContent = searchText;
-        document.title = `Hasil pencarian untuk "${searchText}" - richi.com` 
+        document.title = `Hasil pencarian untuk "${searchText}" - Lyra Aura` 
     } else {
         prevtext.textContent = "null";
     }

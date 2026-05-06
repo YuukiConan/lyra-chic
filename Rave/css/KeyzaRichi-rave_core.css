@@ -325,7 +325,7 @@ option::checkmark {
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
     --background-color: rgb(249, 244, 244);
     --surface-color: rgb(252, 248, 248);
-    --on-surface-color: rgb(119, 119, 119);
+    --on-surface-color: rgb(105, 105, 105);
     --gradient-color: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(145, 145, 145) 50%, rgb(235, 235, 235) 100%);
     --bg-icon-color: rgba(212, 212, 212, 0.2);
     --conic-gradient: conic-gradient(from var(--angle), #361d00, #FF5A00, #361d00);
@@ -339,7 +339,7 @@ html[data-theme="dark"] {
     --secondary-color: rgb(122, 122, 122);
     --background-color: rgb(10, 10, 10);
     --surface-color: rgb(15, 15, 15);
-    --on-surface-color: rgb(124, 124, 124);
+    --on-surface-color: rgb(156, 156, 156);
     --bg-color-value: 20, 20, 20;
     --text-color: white;
     color-scheme: dark;
@@ -386,7 +386,7 @@ html[data-theme="light"] {
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
     --background-color: rgb(249, 244, 244);
     --surface-color: rgb(252, 248, 248);
-    --on-surface-color: rgb(119, 119, 119);
+    --on-surface-color: rgb(105, 105, 105);
     --gradient-color: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(145, 145, 145) 50%, rgb(235, 235, 235) 100%);
     --bg-icon-color: rgba(212, 212, 212, 0.2);
     --conic-gradient: conic-gradient(from var(--angle), #361d00, #FF5A00, #361d00);
@@ -429,7 +429,7 @@ html[data-theme="light"] {
     --secondary-color: rgb(122, 122, 122);
     --background-color: rgb(10, 10, 10);
     --surface-color: rgb(15, 15, 15);
-    --on-surface-color: rgb(124, 124, 124);
+    --on-surface-color: rgb(156, 156, 156);
     --bg-color-value: 20, 20, 20;
     --text-color: white;
 }
@@ -691,7 +691,7 @@ dialog .dialog-topbar {
 }
 
 dialog .content {
-    padding: 0px 2em 16px 2em;
+    padding: 0px 2em 20px 2em;
     width: 100%;
     overflow-y: auto;
 }
@@ -1236,6 +1236,7 @@ header.no-blend .equal div {
     padding: 12px 20px;
     border-radius: 50px;
     align-items: center;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .category i {
@@ -2229,6 +2230,7 @@ div {
     flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
+    padding-bottom: 10px;
 }
 
 .flex.hidden {
@@ -4862,7 +4864,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     font-weight: 500;
     line-height: 22px;
     opacity: 1;
-    transform: translateY(-2px);
+    transform: translateY(0px);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1), transform .7s cubic-bezier(0.075, 0.92, 0.403, 1) !important;
 }
 
@@ -5979,7 +5981,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         transform: none;
         transition: none !important;
         gap: 16px;
-        padding: 20px 2em 20px 2em;
+        padding: 10px 2em 20px 2em;
     }
     .nav-pane .footer.fade-in {
         animation: none;
@@ -6002,7 +6004,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     }
     .nav-pane .content-item {
         justify-content: flex-end;
-        gap: 5px;
+        gap: 3px;
     }
     .nav-pane .content-item.flex {
         display: none;
