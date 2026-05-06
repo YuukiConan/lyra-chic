@@ -578,7 +578,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Raleway, sans-serif;
+    font-family: Raleway, sans-serif !important;
     margin: 4px 0 4px 0;
 }
 
@@ -1220,14 +1220,20 @@ header.no-blend .equal div {
 
 
 /* Hyperlinks dan highlight */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 0 40px 0;
+}
 .category {
     background-color: var(--surface-color) !important;
     display: flex;
-    border: 1px solid rgba(100, 100, 100, 0.1);
+    border: 1px solid rgba(100, 100, 100, 0.3);
     gap: 10px;
     font-family: inherit;
     font-size: 16px;
-    padding: 6px 16px;
+    padding: 12px 20px;
     border-radius: 50px;
     align-items: center;
 }
@@ -5242,8 +5248,8 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .divider {
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
+    font-size: 32px !important;
+    color: var(--on-surface-color)
 }
 .panel-header.scrolled #people-topbar {
     opacity: 1;
@@ -5756,10 +5762,29 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    flex-direction: column;
+    flex-direction: row;
     overflow-y: hidden;
-    padding: 0 40px;
+    padding: 10px 40px;
+    margin: 6em 0;
+}
+
+.preview {
+    display: grid !important;
+
+}
+
+.preview-item {
+    grid-area: 1/1;
+    opacity: 0;
+    transform: scale(1.12);
+    visibility: hidden;
+    transition: .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.preview-item.show {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
 }
 
 .content-item {
@@ -5815,7 +5840,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .nav-pane .footer {
-    padding: 20px 3em;
+    padding: 30px 3em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -5931,12 +5956,19 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     }
 
     .nav-pane .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: flex-end;
-        margin: 0em 24px 0em 24px;
+        height: 100vh;
+        margin: 0em 24px 0em 24px !important;
         padding: 0;
         overflow: hidden;
     }
-
+    .nav-pane .preview {
+        display: none !important;
+        visibility: hidden;
+    }
     .nav-pane .footer {
         display: flex;
         flex-direction: column;
