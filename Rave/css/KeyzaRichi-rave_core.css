@@ -6234,6 +6234,7 @@ footer a:hover {
         grid-row: unset;
         padding: 26px 10px 26px 10px;
         width: 100%;
+        transform: none !important;
     }
     .people-container {
         padding: 0px 10px 26px 10px;
