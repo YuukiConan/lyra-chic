@@ -325,7 +325,7 @@ option::checkmark {
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
     --background-color: rgb(249, 244, 244);
     --surface-color: rgb(252, 248, 248);
-    --on-surface-color: rgb(119, 119, 119);
+    --on-surface-color: rgb(105, 105, 105);
     --gradient-color: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(145, 145, 145) 50%, rgb(235, 235, 235) 100%);
     --bg-icon-color: rgba(212, 212, 212, 0.2);
     --conic-gradient: conic-gradient(from var(--angle), #361d00, #FF5A00, #361d00);
@@ -339,7 +339,7 @@ html[data-theme="dark"] {
     --secondary-color: rgb(122, 122, 122);
     --background-color: rgb(10, 10, 10);
     --surface-color: rgb(15, 15, 15);
-    --on-surface-color: rgb(124, 124, 124);
+    --on-surface-color: rgb(196, 196, 196);
     --bg-color-value: 20, 20, 20;
     --text-color: white;
     color-scheme: dark;
@@ -386,7 +386,7 @@ html[data-theme="light"] {
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
     --background-color: rgb(249, 244, 244);
     --surface-color: rgb(252, 248, 248);
-    --on-surface-color: rgb(119, 119, 119);
+    --on-surface-color: rgb(105, 105, 105);
     --gradient-color: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(145, 145, 145) 50%, rgb(235, 235, 235) 100%);
     --bg-icon-color: rgba(212, 212, 212, 0.2);
     --conic-gradient: conic-gradient(from var(--angle), #361d00, #FF5A00, #361d00);
@@ -429,7 +429,7 @@ html[data-theme="light"] {
     --secondary-color: rgb(122, 122, 122);
     --background-color: rgb(10, 10, 10);
     --surface-color: rgb(15, 15, 15);
-    --on-surface-color: rgb(124, 124, 124);
+    --on-surface-color: rgb(156, 156, 156);
     --bg-color-value: 20, 20, 20;
     --text-color: white;
 }
@@ -578,7 +578,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Raleway, sans-serif;
+    font-family: Raleway, sans-serif !important;
     margin: 4px 0 4px 0;
 }
 
@@ -691,7 +691,7 @@ dialog .dialog-topbar {
 }
 
 dialog .content {
-    padding: 0px 2em 16px 2em;
+    padding: 0px 2em 20px 2em;
     width: 100%;
     overflow-y: auto;
 }
@@ -1220,16 +1220,23 @@ header.no-blend .equal div {
 
 
 /* Hyperlinks dan highlight */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 0 40px 0;
+}
 .category {
     background-color: var(--surface-color) !important;
     display: flex;
-    border: 1px solid rgba(100, 100, 100, 0.1);
+    border: 1px solid rgba(100, 100, 100, 0.3);
     gap: 10px;
     font-family: inherit;
     font-size: 16px;
-    padding: 6px 16px;
+    padding: 12px 20px;
     border-radius: 50px;
     align-items: center;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .category i {
@@ -1238,7 +1245,10 @@ header.no-blend .equal div {
     font-size: 24px;
     padding: 8px;
 }
-
+.category:hover {
+    background-color: var(--surface-color);
+    border-color: var(--primary-color);
+}
 a,
 .link {
     position: relative;
@@ -2223,6 +2233,7 @@ div {
     flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
+    padding-bottom: 10px;
 }
 
 .flex.hidden {
@@ -4825,7 +4836,7 @@ button i,
     width: fit-content;
     height: 50px;
     align-items: center;
-    left: -8px;
+    left: 0px;
 }
 
 header:has(.nav-pane:not(.hidden)) :is(.product, .logo) {
@@ -4838,7 +4849,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .logo {
-    width: 135px !important;
+    width: 140px !important;
     height: 55px !important;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -4856,7 +4867,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     font-weight: 500;
     line-height: 22px;
     opacity: 1;
-    transform: translateY(-2px);
+    transform: translateY(0px);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1), transform .7s cubic-bezier(0.075, 0.92, 0.403, 1) !important;
 }
 
@@ -5242,8 +5253,8 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .divider {
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
+    font-size: 32px !important;
+    color: var(--on-surface-color)
 }
 .panel-header.scrolled #people-topbar {
     opacity: 1;
@@ -5598,7 +5609,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 
 
 .content-item:hover .menuButton  {
-    color: var(--on-surface-color);
+    color: rgb(100, 100, 100)
 }
 .content-item .menuButton:hover {
     color: var(--text-color);
@@ -5756,10 +5767,29 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    flex-direction: column;
+    flex-direction: row;
     overflow-y: hidden;
-    padding: 0 40px;
+    padding: 10px 40px;
+    margin: 6em 0;
+}
+
+.preview {
+    display: grid !important;
+
+}
+
+.preview-item {
+    grid-area: 1/1;
+    opacity: 0;
+    transform: scale(1.12);
+    visibility: hidden;
+    transition: .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.preview-item.show {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
 }
 
 .content-item {
@@ -5815,7 +5845,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .nav-pane .footer {
-    padding: 20px 3em;
+    padding: 30px 3em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -5931,12 +5961,19 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     }
 
     .nav-pane .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: flex-end;
-        margin: 0em 24px 0em 24px;
+        height: 100vh;
+        margin: 0em 24px 0em 24px !important;
         padding: 0;
         overflow: hidden;
     }
-
+    .nav-pane .preview {
+        display: none !important;
+        visibility: hidden;
+    }
     .nav-pane .footer {
         display: flex;
         flex-direction: column;
@@ -5947,7 +5984,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         transform: none;
         transition: none !important;
         gap: 16px;
-        padding: 20px 2em 20px 2em;
+        padding: 10px 2em 20px 2em;
     }
     .nav-pane .footer.fade-in {
         animation: none;
@@ -5970,7 +6007,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     }
     .nav-pane .content-item {
         justify-content: flex-end;
-        gap: 5px;
+        gap: 3px;
     }
     .nav-pane .content-item.flex {
         display: none;
