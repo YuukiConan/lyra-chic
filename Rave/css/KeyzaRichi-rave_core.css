@@ -1178,13 +1178,6 @@ header.no-blend {
     mix-blend-mode: normal;
 }
 
-header.no-blend .equal div {
-    filter: invert(1);
-}
-:root.dark-mode header.no-blend .equal div {
-    filter: invert(0);
-}
-
 .header-container {
     position: relative;
     display: flex;
@@ -6353,6 +6346,9 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    header, .header {
+        mix-blend-mode: normal;
+    }
     @keyframes fadeInUpSmooth {
     from {
         transform: translateY(20px);

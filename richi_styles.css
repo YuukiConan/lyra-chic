@@ -6,7 +6,9 @@
     Ini adalah file gaya CSS utama untuk modifikasi layout elemen yang sudah tersedia di file CSS Rave, biasanya agar responsif dengan ukuran layar, menambahkan efek, atau perubahan lainnya.
 */
 
-
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 .btn {
     font-family: 'Times New Roman', Times, serif
 }

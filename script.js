@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     var Lenis = window.Lenis;
     const lenis = new Lenis({
         duration: 1.5,
-        smoothTouch: true,
         smooth: true,
         direction: 'vertical',
     })
