@@ -1118,7 +1118,7 @@ header, .header {
     left: 0;
     right: 0;
     z-index: 10 !important;
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
 }
 
 header.no-blend {
@@ -1130,7 +1130,7 @@ header.no-blend {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 1em 22px 1em;
+    padding:12px 1em 12px 1em;
     will-change: transform;
     transition: transform 1s cubic-bezier(0.075, 0.81, 0.265, 1), opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1), padding .3s cubic-bezier(0.075, 0.81, 0.265, 1) !important;
 }
@@ -1142,11 +1142,13 @@ header.no-blend {
 }
 
 .header-container.scrolled {
-    padding: 12px 1.0em 12px 1.0em;
+    padding: 10px 1.0em 10px 1.0em;
 }
 
 .header-container.scrolled .navigation {
     opacity: 0;
+    transform: translateX(40px);
+    visibility: hidden;
 }
 .header-container.scrolled .product {
     opacity: 0;
@@ -3112,13 +3114,12 @@ div {
 
 .panel {
     position: relative;
-    padding: 18px 26px;
+    padding: 20px 26px;
     width: 300px;
     min-height: 300px;
-    max-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     border-radius: 30px;
     transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: rgba(100, 100, 100, 0.05);
@@ -3131,8 +3132,7 @@ div {
 .panel h1 {
     color: var(--text-color);
     font-size: 22px;
-    transition: all .4s;
-    font-family: Raleway;
+    font-family: Manrope;
 }
 
 .panel h1::before {
@@ -3143,7 +3143,9 @@ div {
 
 .panel p {
     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-size: 13px;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Inter, sans-serif;
 }
 
 .panel-image {
@@ -4690,7 +4692,7 @@ button i,
     left: 0px;
 }
 
-header:has(.nav-pane:not(.hidden)) :is(.product, .logo) {
+header:has(.nav-pane:not(.hidden)) :is(.product) {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-30px);
@@ -4735,7 +4737,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     gap: 1.1em;
     padding: 4px 2px;
     opacity: 1;
-    transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: .5s cubic-bezier(0.075, 0.92, 0.403, 1);
 }
 
 
@@ -5471,7 +5473,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     font-size: 3.8rem;
     gap: 14px;
     text-align: left;
-    padding: 12px 8px 12px 8px;
+    padding: 4px 8px 4px 8px;
     border-radius: 16px;
     opacity: 0;
     color: var(--text-color);
@@ -5651,34 +5653,34 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     justify-content: center;
     flex-direction: row;
     overflow: hidden;
-    padding: 10px 40px;
-    margin: 5em 0;
+    width: 100%;
+    padding: 10px 30px;
+    position: absolute; top: 50%; transform: translateY(-50%);
 }
 
 .preview {
     display: grid !important;
-
+    overflow-y: scroll;
+    align-items: center;
 }
 
 .preview-item {
     grid-area: 1/1;
     opacity: 0;
-    transform: scale(1.12);
     visibility: hidden;
     transition: .5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .preview-item.show {
     opacity: 1;
-    transform: scale(1);
     visibility: visible;
 }
 
 .content-item {
     width: 100%;
     display: flex;
-    gap: 4px;
-    justify-content: flex-end;
+    gap: 20px;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -5691,19 +5693,15 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 @keyframes fadeInUpSmooth {
     from {
         transform: translateY(100%);
-        border-radius: 100%;
     } to {
         transform: translateY(0px);
-        border-radius: 0px;
     }
 }
 @keyframes fadeOutUpSmooth {
     from {
         transform: translateY(0);
-        border-radius: 0px;
     } to {
         transform: translateY(100%);
-        border-radius: 100%;
     }
 }
 @keyframes fadeInDownSmooth {
@@ -5726,7 +5724,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .nav-pane .footer {
-    padding: 30px 3em;
+    padding: 30px 2.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -5782,7 +5780,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 .copyright {
     position: relative;
     left: 20px;
-    color: #696969;
+    color: var(--on-surface-color);
 }
 
 @media (max-width: 900px) {
@@ -5819,14 +5817,6 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         height: 70px;
     }
 
-}
-
-
-@media (max-width: 600px) {
-    .content .content-container {
-        padding-right: 10px;
-    }
-    
     .menuButton {
         font-size: 2.5rem;
         opacity: 1;
@@ -5838,15 +5828,21 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         box-shadow: none;
         background-color: var(--surface-color);
     }
-
+    .nav-container {
+        height: 100%;
+        gap: 0;
+        justify-content: flex-end;
+    }
     .nav-pane .content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
-        height: 100vh;
-        margin: 0em 24px 0em 24px !important;
-        padding: 0;
+        width: 100%;
+        height: 100%;
+        position: relative; top: 0; transform: none;
+        margin-top: 13%;
+        padding: 0 20px;
         overflow: hidden;
     }
     .nav-pane .preview {
@@ -5863,30 +5859,19 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         transform: none;
         transition: none !important;
         gap: 16px;
-        padding: 10px 2em 20px 2em;
+        padding: 10px 30px 20px 30px;
     }
     .nav-pane .footer.fade-in {
         animation: none;
         transform: none;
     }
-    .nav-pane .chat {
-        display: none;
-    }
     header:has(.nav-pane:not(.hidden)) :is(.product, .logo) {
         opacity: 0;
         transform: translateY(0px) !important;
     }
-    .nav-pane .footer .chat-alt {
-        box-sizing: border-box;
-        position:relative;
-        display: block;
-        margin: 0;
-        width: 88dvw !important;
-        max-width: none !important;
-    }
     .nav-pane .content-item {
         justify-content: flex-end;
-        gap: 3px;
+        gap: 10px;
     }
     .nav-pane .content-item.flex {
         display: none;
@@ -5898,6 +5883,14 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 
     .overlay {
         background-color: rgba(100, 100, 100, 0.2)
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .content .content-container {
+        padding-right: 10px;
     }
 
     .side-panel .name {
@@ -5917,7 +5910,7 @@ footer {
 }
 
 footer a, footer .copyright {
-    color: #949494 !important;
+    color: var(--text-color) !important;
     transition: all .7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -5978,11 +5971,11 @@ footer a:hover {
 }
 
 .footer-column h1 {
-    opacity: 0.7;
+    opacity: 0.8;
     display: inline-block;
     width: inherit;
-    margin-bottom: 16px;
-    font-size: 28px;
+    margin-bottom: 10px;
+    font-size: 24px;
     padding: 2px 0px;
     font-weight: 500;
     font-family: Manrope, sans-serif;
@@ -5990,6 +5983,7 @@ footer a:hover {
 
 .footer-column p {
     font-size: 15px;
+    color: var(--text-color);
     font-family: Manrope, sans-serif;
 }
 
@@ -6258,6 +6252,17 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .nav-pane .chat {
+        display: none;
+    }
+    .nav-pane .footer .chat-alt {
+        box-sizing: border-box;
+        position:relative;
+        display: flex;
+        margin: 0;
+        width: 88dvw !important;
+        max-width: none !important;
+    }
     .actions {
         padding: 9px 10px;
     }
@@ -6280,7 +6285,7 @@ footer a:hover {
     }
     @keyframes fadeInUpSmooth {
     from {
-        transform: translateY(20px);
+        transform: translateY(0px);
         opacity: 0;
         border-radius: 0px;
     } to {
@@ -6319,10 +6324,8 @@ footer a:hover {
     from {
         transform: translateY(0);
         opacity: 1;
-        border-radius: 0px;
     } to {
-        transform: translateY(20px);
-        border-radius: 0px;
+        transform: translateY(0px);
         opacity: 0;
     }
 }
