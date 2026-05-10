@@ -1144,6 +1144,10 @@ header.no-blend {
 .header-container.scrolled {
     padding: 10px 1.0em 10px 1.0em;
 }
+.header-container.scrolled .logo {
+    animation: rotateLogo .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    content: url('/assets/logo/Lyra_simple.webp');
+}
 
 .header-container.scrolled .navigation {
     opacity: 0;
