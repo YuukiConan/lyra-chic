@@ -114,6 +114,11 @@ a {
     src: url("./fonts/Inter-VariableFont_opsz,wght.woff2") format('woff2'); /* fix sementara */
     font-display: swap;
 }
+@font-face {
+    font-family: "Source Serif 4";
+    src: url("./fonts/SourceSerif4-VariableFont_opsz\,wght.woff2") format('woff2'); /* fix sementara */
+    font-display: swap;
+}
 
 @font-face {
     font-family: 'Open-Dyslexic';

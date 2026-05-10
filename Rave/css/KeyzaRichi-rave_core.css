@@ -525,7 +525,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Manrope, sans-serif !important;
+    font-family: "Source Serif 4", serif !important;
     margin: 4px 0 4px 0;
 }
 
@@ -755,7 +755,7 @@ ul li {
 }
 
 .promo {
-    margin: 4px 0px;
+    margin: 0px 0px;
     padding: 8px 16px;
     border-radius: 45px;
     width: fit-content;
@@ -772,7 +772,6 @@ ul li {
     margin: 0px 2px 0px 6px;
     padding: 2px 12px;
     font-size: 15px;
-    top: -1px;
     color: white;
 }
 
@@ -1118,7 +1117,6 @@ header, .header {
     left: 0;
     right: 0;
     z-index: 10 !important;
-    mix-blend-mode: exclusion;
 }
 
 header.no-blend {
@@ -1130,7 +1128,8 @@ header.no-blend {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:12px 1em 12px 1em;
+    padding:4px 1em 4px 1em;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.1);
     will-change: transform;
     transition: transform 1s cubic-bezier(0.075, 0.81, 0.265, 1), opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1), padding .3s cubic-bezier(0.075, 0.81, 0.265, 1) !important;
 }
@@ -1142,11 +1141,8 @@ header.no-blend {
 }
 
 .header-container.scrolled {
-    padding: 10px 1.0em 10px 1.0em;
-}
-.header-container.scrolled .logo {
-    animation: rotateLogo .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    content: url('/assets/logo/Lyra_simple.webp');
+    background-color: var(--background-color);
+    padding: 4px 1.0em 4px 1.0em;
 }
 
 .header-container.scrolled .navigation {
@@ -1767,11 +1763,12 @@ div {
 }
 
 .section-header.large {
-    margin: 19% 0.5em 2em 0.2em;
+    margin: 5% 0.5em 16px 0.3em;
 }
 .section-header.large .section-title {
-    font-size: clamp(3rem, -3rem + 16vw, 10rem) !important;
-    font-weight: 600;
+    font-family: "Source Serif 4", serif !important;
+    font-size: clamp(3rem, -3rem + 16vw, 7rem) !important;
+    font-weight: 400;
 }
 .section-header.large .section-desc {
     font-size: 1.3rem;
@@ -2704,7 +2701,7 @@ div {
     grid-auto-rows: auto;
     grid-auto-flow: dense;
     justify-content: center;
-    padding: 40px 10px 40px 26px;
+    padding: 0px 10px 20px 26px;
     column-gap: 2.4vw;
     row-gap: 2.2vw;
 }
@@ -2756,6 +2753,10 @@ div {
     margin: 5px 0px 8px 0px;
     background: rgba(100, 100, 100, 0.05) url('/assets/logo/keyzarichi.org-200w.webp') no-repeat;
     background-position: center center;
+}
+
+.people .people-img.centered img, .people-info .people-img.centered img {
+    object-position: center center;
 }
 
 .people:hover .people-img{
@@ -4616,8 +4617,6 @@ header * {
     width: 55px;
     height: 55px !important;
     transition: width .4s cubic-bezier(0.075, 0.82, 0.165, 1), opacity .8s cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    filter: invert(1);
-    
     isolation: isolate;
     z-index: 1;
     gap: 16px;
@@ -4712,27 +4711,26 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     aspect-ratio: 3 / 2;
     object-fit: cover;
     opacity: 1;
-    filter: invert(1);
     transform: translateY(0px) scale(1.08);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.403, 1), transform .3s cubic-bezier(0.075, 0.92, 0.403, 1);
 }
 
 
 .product {
-    color: white;
-    font-family: Raleway, sans-serif !important;
-    font-size: 19px;
-    font-weight: 500;
+    color: var(--text-color);
+    font-family: "Source Serif 4", sans-serif !important;
+    font-size: 24px;
+    font-weight: 400;
     line-height: 22px;
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(1px);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1), transform .7s cubic-bezier(0.075, 0.92, 0.403, 1) !important;
 }
 
 .sub-brand {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
-    color: rgb(209, 209, 209);
+    color: var(--on-surface-color);
     letter-spacing: 0.03em
 }
 
@@ -4756,8 +4754,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     font-size: 16px;
     color: black;
     cursor: pointer;
-    padding: 12px 12px;
-    filter: invert(1);
+    padding: 6px 12px;
     border-radius: 25px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -4768,10 +4765,6 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 :root.dark-mode .actions .navBtn, :root.dark-mode .navBtn {
     color: white;
-    filter: invert(0);
-}
-:root.dark-mode .contact-button {
-    filter: invert(1);
 }
 
 .navBtn::after {
@@ -4977,7 +4970,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     align-items: center;
     gap: 10px;
     position: relative;
-    padding: 9px 18px;
+    padding: 5px 18px;
 }
 
 .mobile-actions {
@@ -5789,10 +5782,10 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 
 @media (max-width: 900px) {
     .header-container {
-        padding: 20px 0em 20px 0em;
+        padding: 6px 0em 6px 0em;
     }
     .header-container.scrolled {
-        padding: 16px 0em 16px 0em;
+        padding: 6px 0em 6px 0em;
     }
     .video-container .video, .image {
         aspect-ratio: 4 / 3;
@@ -6137,12 +6130,13 @@ footer a:hover {
     }
     .people-container {
         padding: 0px 10px 26px 10px;
-        row-gap: 20px;
+        row-gap: 10px;
         grid-template-columns: repeat(1, 1fr);
     }
     .people-container.rtl, .people-container.two-column {
         grid-template-columns: repeat(1, 1fr);
         padding: 0px 10px 26px 10px;
+        row-gap: 10px;
         direction: ltr;
     }
     .people.row-2 {
@@ -6256,6 +6250,10 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .logo {
+        position: relative;
+        left: -10px;
+    }
     .nav-pane .chat {
         display: none;
     }
@@ -6272,17 +6270,6 @@ footer a:hover {
     }
     .contact-button {
         display: none;
-    }
-    .logo {
-        position: relative;
-        left: -3px;
-        filter: invert(0);
-    }
-    .hamburger.active .equal div {
-        filter: invert(1);
-    }
-    .equal div {
-        background-color: black;
     }
     header, .header {
         mix-blend-mode: normal;
@@ -6472,7 +6459,7 @@ footer a:hover {
 
     .section-header.large .section-title {
         font-size: 4.5rem;
-        margin: 0px 16px 20px 16px;
+        margin: 0px 16px 10px 16px;
     }
     .section-header.medium .section-title {
         font-size: 2rem;
@@ -6483,7 +6470,7 @@ footer a:hover {
         justify-content: center;
     }
     .section-header.large {
-        margin: 20dvh 4px 20px 4px;
+        margin: 5em 4px 10px 4px;
     }
 
     .side-panel {
