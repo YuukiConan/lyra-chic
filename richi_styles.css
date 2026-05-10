@@ -84,11 +84,7 @@ a {
     padding: 0 20px;
     overflow-y: scroll;
 }
-
-.nested-content {
-    height: 200%;
-} */
-
+ */
 
 #rating .rating-container {
     width: 100%;
@@ -261,7 +257,7 @@ a {
 
 .hero {
     width: 100%;
-    padding: 8.5% 0 2em 0;
+    padding: 6em 0 2em 0;
 }
 
 .hero i {
