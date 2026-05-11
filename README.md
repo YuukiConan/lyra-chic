@@ -4,13 +4,13 @@
 ![Made with](https://img.shields.io/badge/Made%20with-HTML%20CSS%20JS-lightgrey)
 
 <div align="center">
-  <img src="assets/logo/Lyra.webp" alt="Description of image">
+  <img src="assets/logo/lyra.webp" alt="Description of image">
 </div>
 
 Creative agency website focused on interior, fashion, and graphic experiences.
 
-🌐 Live Demo:
-https://yuukiconan.github.io/Lyra-Aura
+## DEMO
+https://lyraaura.vercel.app/
 
 ![Richi's Showcase](Keyza_Richi_Showcase.webp)
 
