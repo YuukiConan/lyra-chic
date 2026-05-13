@@ -177,9 +177,16 @@ fetch(url).then(response => response.text()).then(html => {
         brand.classList.remove('fade-out');
         brand.classList.add('fade-in');
         header.classList.add('no-blend');
+        btn.classList.add('active');
+        
+        let duration = 9;
+        
+        if (window.innerWidth <= 768) {
+            duration = 3;
+        }
         
         requestAnimationFrame(() => { 
-            navpane.style.animation = 'fadeInUpSmooth .9s cubic-bezier(0.475, 0.12, 0.165, 1)';
+            navpane.style.animation = `fadeInUpSmooth .${duration}s cubic-bezier(0.475, 0.12, 0.165, 1)`;
             btn.classList.add('no-pointer');
             navpane.classList.remove('hidden');
             setTimeout(() => {
@@ -190,10 +197,9 @@ fetch(url).then(response => response.text()).then(html => {
                     }, index * 60);
                     
                 })
-            }, 800)
+            }, 200)
             navpane.addEventListener('animationend', () => {
                 if (navpane.style.animation.includes('fadeIn')) {
-                    btn.classList.add('active');
                     btn.classList.remove('no-pointer');
                     isAnimating = false;
                 }
@@ -205,16 +211,20 @@ fetch(url).then(response => response.text()).then(html => {
         if (isAnimating) return;
         isAnimating = true;
         btn.classList.add('no-pointer');
-        let delay = 550;
+        btn.classList.add('active');
         
-        if (window.innerWidth <= 600) {
+        let delay = 550;
+        let duration = 9;
+        
+        if (window.innerWidth <= 768) {
             delay = 0;
+            duration = 3;
         }
         
         requestAnimationFrame(() => {
             btn.classList.remove('active');
             setTimeout(() => {
-                navpane.style.animation = 'fadeOutUpSmooth .9s cubic-bezier(0.8, 0.292, 0.333, 1)';
+                navpane.style.animation = `fadeOutUpSmooth .${duration}s cubic-bezier(0.8, 0.292, 0.333, 1)`;
             }, delay);
             
             overlay.classList.remove('showOverlay');
