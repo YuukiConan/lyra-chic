@@ -1,7 +1,7 @@
 // Initialize Rave framework
 import Rave, { Security } from "./Rave/js/Rave.js";
 
-const richi = Rave ? new Rave("UI Minimalist", "keyzarichi.org") : null;
+const richi = Rave ? new Rave("Lyra UI", "Yuuki and Yuika Project") : null;
 const security = Security ? new Security('1.1', "Keyza Richi") : null;
 
 richi.setHeadTagType("icon", "./assets/logo/Lyra_simple.webp");

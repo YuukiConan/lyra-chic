@@ -217,7 +217,7 @@ fetch(url).then(response => response.text()).then(html => {
         let duration = 9;
         
         if (window.innerWidth <= 768) {
-            delay = 0;
+            delay = 280;
             duration = 3;
         }
         
@@ -238,7 +238,7 @@ fetch(url).then(response => response.text()).then(html => {
                     btn.classList.add('fade-out');
                     brand.classList.remove('fade-in');
                     brand.classList.add('fade-out');
-                }, index * 170);
+                }, index * 100);
                 
             })
             
