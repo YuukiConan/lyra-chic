@@ -134,6 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const bio = panel.querySelector('.people-bio h1');
     const img = panel.querySelector('.people-img');
     const badges = panel.querySelector('.badge-container');
+    const peopleCtr = document.querySelector('.people-container');
+    const activeMembers = ["anneta", "caca", "lusiana"];
+        let hiddenCounts = 0;
 
     panel.addEventListener('scroll', () => {
         if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 0.5)) {
@@ -146,6 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeCard = null;
     
     people.forEach(card => {
+        const key = card.querySelector('.people-bio').dataset.people;
+
+        if (!activeMembers.includes(key)) {
+            card.classList.add('hidden');
+            hiddenCounts++;
+        }
+        
         card.addEventListener('click', () => {
             document.body.style.overflowY = 'hidden';
             document.querySelectorAll('.side-panel div').forEach((item, i) => {
@@ -159,10 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = bio.dataset.people;
             
             const person = peopleData.find(p => String(p.id) === key);
-            
+        
             panel.classList.remove('hidden');
             overlay.classList.add('showOverlay');
-            
 
             activeCard = card;
             activeCard.classList.add('focus');
@@ -251,6 +260,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
     })
+    
+    if (hiddenCounts > 0) {
+        const info = document.createElement('div');
+        info.textContent = `and ${hiddenCounts} other unknown members`;
+        peopleCtr.appendChild(info);
+        }
     
     function closePanel() {
         requestAnimationFrame(() => {
