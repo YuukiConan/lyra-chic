@@ -87,7 +87,10 @@
     </div>
 </dialog>
 <body data-title="Tentang Kami">
-    <header></header>
+    <div class="banner-with-header">
+        <div class="banner">Starting in June 2026, we are fully migrated to Lyra UI.</div>
+        <header></header>
+    </div>
     <main>
         <div class="overlay"></div>
         <div class="side-panel people-panel hidden" data-lenis-prevent>

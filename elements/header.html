@@ -10,11 +10,22 @@
         </div>
         <div class="actions">
             <div class="navigation">
-                <button class="navBtn"><a href="./projects.html" data-lang="home">Our Secrets</a></button>
+                <div class="drop-down">
+                    <button class="navBtn"><a href="./projects.html" data-lang="home">Work</a></button>
+                    <div class="drop-down-content">
+                        <a href="./interior.html"><button class="drop-down-button">Interior design</button></a>
+                        <a href="./fashion.html"><button class="drop-down-button">Fashion and Muse</button></a>
+                        <a href="./graphics.html"><button class="drop-down-button">UI/UX Designer</button></a>
+                    </div>
+                </div>
                 <button class="navBtn"><a href="./blog.html">Blog</a></button>
                 <button class="navBtn"><a href="./about.html">About</a></button>
             </div>
             <div class="actionsBtns">
+                <div>
+                    <input type="checkbox" id="cbx" name="changetheme" hidden />
+                    <button class=" empty toggleTheme" id="toggleTheme"><i class="lni lni-moon-half-right-5" id="themeIcon"></i></button>
+                </div>
                 <div>
                     <button class="navBtn btn medium outline contact-button" aria-label="contact Lyra button">Contact <i class="lni lni-arrow-angular-top-right"></i></button>
                 </div>
@@ -86,9 +97,7 @@
                 </div>
                 <div class="navpane-footer-actions">
                     <button class="btn accent chat">Talk to Lyra<i class="lni lni-arrow-angular-top-right"></i></button>
-                    <input type="checkbox" id="cbx" name="changetheme" hidden />
-                    <button class="btn empty toggleTheme" id="toggleTheme"><i class="lni lni-moon-half-right-5" id="themeIcon"></i></button>
-                    <i class="uil uil-setting" id="labs"></i>
+                    <i class="uil uil-setting" id="labs" hidden></i>
                 </div>
             </div>
             <div>
