@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = panel.querySelector('.people-img');
     const badges = panel.querySelector('.badge-container');
     const peopleCtr = document.querySelector('.people-container');
-    const activeMembers = ["anneta", "caca", "lusiana"];
-        let hiddenCounts = 0;
+    const activeMembers = ["anneta", "caca", "lusiana", "deandra", "ercila", "flos", "fayha"];
+    let hiddenCounts = 0;
 
     panel.addEventListener('scroll', () => {
         if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 0.5)) {
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const info = document.createElement('div');
         info.textContent = `and ${hiddenCounts} other unknown members`;
         peopleCtr.appendChild(info);
-        }
+    }
     
     function closePanel() {
         requestAnimationFrame(() => {
