@@ -73,19 +73,40 @@
         "description": "Ercila’s trusted companion in the world of imagination; Flos helps Ercila transform art into unparalleled creativity. <br><br>More about Flos is coming soon... but one thing is for sure, Flos is a talented artist in her own right, with a unique perspective and creative energy that helps bring the website to life with visually stunning graphics and captivating content.",
         "nickname": "Flos",
         "aliases": "",
-        "image": "./assets/image/member_avatar/flos.webp",
+        "image": "./assets/image/member_avatar/flos.jpg",
         "id": "flos",
         "instagram": [
             
         ],
         "like_count": 0
-    }    , {
+    }, {
         "name": "Aulia Bikrun Fayha",
         "description": "Ercila's best friend. <br><br>The story about Fayha is still being written... we just make she being mysterious in this website.",
         "nickname": "Fayha",
         "aliases": "",
         "image": "",
         "id": "fayha",
+        "instagram": [
+            
+        ],
+        "like_count": 0
+    },
+    {
+        "name": "Jessica Noleen Alka",
+        "description": "Music producer and member of keyzarichi.org in the fashion industry.",
+        "nickname": "Jessica",
+        "image": "./assets/image/jessica_noleen/Jessica.png",
+        "id": "jessica",
+        "aliases": "jessie m wolen",
+        "like_count": 0,
+        "comment_count": 0
+    }, {
+        "name": "Ivo Nila Zahra",
+        "description": "Deandra and Ercila's friend at the same church. <br><br>The story about Ivo is still being written... we just make she being mysterious in this website.",
+        "nickname": "Ivo",
+        "aliases": "",
+        "image": "",
+        "id": "ivnlzhr",
         "instagram": [
             
         ],
