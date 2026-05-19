@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const body = document.querySelector('body');
-    const themes = ["default", "mono", "sarah-olive", "nia-charm"];
+    const themes = ["nia-charm"];
 
     const savedTheme = localStorage.getItem('theme-color');
     if (savedTheme && themes.includes(savedTheme)) {
