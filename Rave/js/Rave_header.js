@@ -170,9 +170,6 @@ fetch(url).then(response => response.text()).then(html => {
     })
     
     function openNavPane() {
-        if (isAnimating) return;
-        isAnimating = true;
-
         overlay.classList.add('showOverlay');
         brand.classList.remove('fade-out');
         brand.classList.add('fade-in');
@@ -201,15 +198,12 @@ fetch(url).then(response => response.text()).then(html => {
             navpane.addEventListener('animationend', () => {
                 if (navpane.style.animation.includes('fadeIn')) {
                     btn.classList.remove('no-pointer');
-                    isAnimating = false;
                 }
             });
         });
     }
 
     function closeNavPane() {
-        if (isAnimating) return;
-        isAnimating = true;
         btn.classList.add('no-pointer');
         btn.classList.add('active');
         
@@ -244,7 +238,6 @@ fetch(url).then(response => response.text()).then(html => {
             
             navpane.addEventListener('animationend', () => {
                 if (navpane.style.animation.includes('fadeOut')) {
-                    isAnimating = false;
                     navpane.classList.add('hidden');
                     header.classList.remove('no-blend');
                     setTimeout(() => {
