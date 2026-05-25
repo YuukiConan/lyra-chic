@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = panel.querySelector('.people-img');
     const badges = panel.querySelector('.badge-container');
     const peopleCtr = document.querySelector('.people-container');
-    const activeMembers = ["anneta", "deandra", "ercila", "ivnlzhr", "flos", "fayha", "jessica"];
+    const activeMembers = ["anneta", "jessica"];
     let hiddenCounts = 0;
 
     panel.addEventListener('scroll', () => {
