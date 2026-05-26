@@ -27,10 +27,16 @@
         "name": "Jessica Noleen Alka",
         "description": "Music producer and member of keyzarichi.org in the fashion industry.",
         "nickname": "Jessica",
-        "image": "./assets/image/jessica_noleen/Jessica.webp",
+        "image": "./assets/image/jessica_noleen/Jessica.png",
         "id": "jessica",
         "aliases": "jessie m wolen",
         "like_count": 0,
         "comment_count": 0
+    }, 
+    {
+        "name": "Coming soon",
+        "nickname": "Unknown",
+        "image": "./assets/image/member_avatar/crshyle.jpg",
+        "id": "crshyle"
     }
 ]

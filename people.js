@@ -135,11 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = panel.querySelector('.people-img');
     const badges = panel.querySelector('.badge-container');
     const peopleCtr = document.querySelector('.people-container');
-    const activeMembers = ["anneta", "jessica"];
+    const activeMembers = ["anneta", "crshyle", "jessica"];
     let hiddenCounts = 0;
 
     panel.addEventListener('scroll', () => {
-        if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 0.5)) {
+        if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 2)) {
             panelHeader.classList.add('scrolled');
         } else {
             panelHeader.classList.remove('scrolled');
