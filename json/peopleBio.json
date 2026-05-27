@@ -37,8 +37,13 @@
         "nickname": "Jessica",
         "image": "./assets/image/jessica_noleen/Jessica.png",
         "id": "jessica",
-        "aliases": "jessie m wolen",
-        "like_count": 0,
-        "comment_count": 0
+        "aliases": "jessie m wolen"
+    }, {
+        "name": "Natalia Jessica Lisianto",
+        "description": "A mechanical engineering student and contributor to Lyra who is passionate about robotics, machine design, and automation.",
+        "nickname": "Natalia",
+        "aliases": "",
+        "image": "./assets/image/member_avatar/natalia_jessica.webp",
+        "id": "natalia"
     }
 ]

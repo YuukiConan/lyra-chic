@@ -1007,7 +1007,6 @@ ul li {
 /* Header */
 .banner-with-header {
     position: fixed;
-    background-color: var(--background-color);
     top: 0; left: 0; right: 0;
     z-index: 10;
     transition: transform .7s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -1045,9 +1044,6 @@ header.no-blend {
     transition: transform 1s cubic-bezier(0.075, 0.81, 0.265, 1), opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1), padding .3s cubic-bezier(0.075, 0.81, 0.265, 1) !important;
 }
 
-.header-container.scrolled {
-    background-color: var(--background-color);
-}
 
 .banner-with-header:has(.header-container.hide) {
     transform: scale(0.97);
