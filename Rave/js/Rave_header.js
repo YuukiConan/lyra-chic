@@ -30,8 +30,8 @@ fetch(url).then(response => response.text()).then(html => {
             cbx.checked = isEnabled;
 
             if (icon) {
-                icon.classList.toggle('uil-moon', isEnabled);
-                icon.classList.toggle('uil-sun', !isEnabled);
+                icon.classList.toggle('ri-moon-clear-line', isEnabled);
+                icon.classList.toggle('ri-sun-line', !isEnabled);
             }
         }
     }

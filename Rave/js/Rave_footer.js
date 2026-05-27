@@ -11,5 +11,8 @@ fetch('./elements/footer.html')
             var getYear = new Date();
             year.innerHTML = getYear.getFullYear();
         }
+        document.getElementById('back-to-top').addEventListener('click', (e) => {
+            document.documentElement.scrollTo({top: 0, behavior: 'smooth'});
+        });
     })
     .catch(error => console.error("Failed to fetch:", error));

@@ -36,10 +36,9 @@
     <link rel="prefetch" href="./json/peopleBio.json" as="fetch" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="./fonts/Lineicons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" href="./Rave/css/Lyra_UI.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" href="./richi_styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <link rel="preload" href="./fonts/line.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="./fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -87,10 +86,7 @@
     </div>
 </dialog>
 <body data-title="About Us">
-    <div class="banner-with-header">
-        <div class="banner">Starting in June 2026, <span class="highlight">we are fully migrated to Lyra UI</span>. Still love Rave? <a href="https://lyraaura.vercel.app" target="_blank"> Check out our main website. </a></div>
-        <header></header>
-    </div>
+    <header></header>
     <main>
         <div class="overlay"></div>
         <div class="side-panel people-panel hidden" data-lenis-prevent>
@@ -124,8 +120,11 @@
             <div class="section-header large">
                 <h1 class="section-title">About Us</h1>
             </div>
+            <div class="section-header medium stylish">
+                    <h1 class="section-title">Key People</h1>
+                </div>
             <div class="section-content peopleCtr">
-                <div class="people-container">
+                <div class="people-container two-column">
                     <div class="people">
                         <span class="labelTag" data-added="2026-01-02T08:00:00Z">Populer</span>
                         <div class="people-bio" data-people="anneta">
@@ -139,12 +138,12 @@
                         </div>
                         <div class="people-btns">
                             <div class="social-media">
-                                <a href="https://instagram.com/niaapayy" target="_blank" data-tooltip="niaapayy"><div class="link"><i class="lni lni-instagram"></i><i class="private"></i><span>niaapayy</span></div></a>
-                                <a href="https://tiktok.com/@netaaawp" target="_blank" data-tooltip="netaaawp"> <div class="link"> <i class="lni lni-tiktok"></i><span>netaaawp</span></div></a>
+                                <a href="https://instagram.com/niaapayy" target="_blank" data-tooltip="niaapayy"><div class="link"><i class="ri-instagram-line"></i><i class="private"></i><span>niaapayy</span></div></a>
+                                <a href="https://tiktok.com/@netaaawp" target="_blank" data-tooltip="netaaawp"> <div class="link"> <i class="ri-tiktok-fill"></i><span>netaaawp</span></div></a>
                             </div>
                         </div>
                     </div>
-                    <div class="people">
+                    <div class="people span-2">
                         <div class="people-bio" data-people="crshyle">
                             <div class="name">
                                 <h2></h2>
@@ -156,7 +155,7 @@
                         </div>
                         <div class="people-btns">
                             <div class="social-media">
-                                <a href="https://instagram.com/crshyle" target="_blank" data-tooltip="crshyle"><div class="link"><i class="lni lni-instagram"></i><span>crshyle</span></div></a>
+                                <a href="https://instagram.com/crshyle" target="_blank" data-tooltip="crshyle"><div class="link"><i class="ri-instagram-line"></i><span>crshyle</span></div></a>
                             </div>
                         </div>
                     </div>
@@ -172,27 +171,35 @@
                         </div>
                         <div class="people-btns">
                             <div class="social-media">
-                                <a href="https://instagram.com/2615.jessica" target="_blank" data-tooltip="2615.jessica"><div class="link"><i class="lni lni-instagram"></i><span>2615.jessica</span></div></a>
-                                <a href="https://tiktok.com/@jessican_jes" target="_blank" data-tooltip="jessican_jes"><div class="link"><i class="lni lni-tiktok"></i><span>jessican_jes</span></div></a>
+                                <a href="https://instagram.com/2615.jessica" target="_blank" data-tooltip="2615.jessica"><div class="link"><i class="ri-instagram-line"></i><span>2615.jessica</span></div></a>
+                                <a href="https://tiktok.com/@jessican_jes" target="_blank" data-tooltip="jessican_jes"><div class="link"><i class="ri-tiktok-fill"></i><span>jessican_jes</span></div></a>
                             </div>
                         </div>
                     </div>
-                    <div class="people">
-                        <span class="labelTag" data-added="2026-04-16T10:47:00Z">Baru</span>
-                        <div class="people-bio" data-people="natalia">
-                            <div class="name">
-                                <h2></h2>
-                                <span class="nickname"></span>
+                </div>
+                <div class="section-header medium stylish">
+                    <h1 class="section-title">We are</h1>
+                    <h1 class="section-title right-align"><span class="marker-highlight">Lyra Aura</span></h1>
+                </div>
+                <div class="section-content">
+                    <div class="people-container rtl">
+                        <div class="people">
+                            <span class="labelTag" data-added="2026-04-16T10:47:00Z">Baru</span>
+                            <div class="people-bio" data-people="natalia">
+                                <div class="name">
+                                    <h2></h2>
+                                    <span class="nickname"></span>
+                                </div>
+                                <div class="people-img">
+                                    <img src="./assets/image/member_avatar/natalia_jessica.webp" />
+                                </div>
                             </div>
-                            <div class="people-img">
-                                <img src="./assets/image/member_avatar/natalia_jessica.webp" />
+                            <div class="people-btns">
+                                <div class="social-media">
+                                    <a href="https://www.instagram.com/na.jessica0412/" target="_blank" data-tooltip="na.jessica0412"><div class="link"><i class="ri-instagram-line"></i><span>na.jessica0412</span></div></a>
+                                </div>
+                                
                             </div>
-                        </div>
-                        <div class="people-btns">
-                            <div class="social-media">
-                                <a href="https://www.instagram.com/na.jessica0412/" target="_blank" data-tooltip="na.jessica0412"><div class="link"><i class="lni lni-instagram"></i><span>na.jessica0412</span></div></a>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>

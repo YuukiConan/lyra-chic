@@ -40,10 +40,9 @@
     <link rel="prefetch" href="./json/peopleBio.json" as="fetch" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="./fonts/Lineicons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" href="./Rave/css/Lyra_UI.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" href="./richi_styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <link rel="preload" href="./fonts/line.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="./fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -80,32 +79,21 @@
             direction: 'vertical',
         })
 
+        // Initialize Rave framework
+        import Rave, { Security } from "./Rave/js/Rave.js";
+
+        const richi = Rave ? new Rave("UI Minimalist", "Lyra Aura") : null;
+
         
         lenis.on('scroll', (e) => {
-            const pos = document.documentElement.scrollTop;
-            const threshold = 200;
-            const minPadding = 0;
-            const maxPadding = 100;
-            const minRadius = 0;
-            const maxRadius = 46;
-            const video = document.querySelector('.video-container');
-            const videoEl = document.querySelector('.video-container .video');
+            const video = '.video-container';
+            const rt1 = '.ctr-1';
 
-            if (pos > threshold) {
-                let scrollRatio = Math.max(minPadding, maxPadding - (pos - threshold) * 0.2);
-                let radiusRatio = Math.max(minRadius, maxRadius - (pos - threshold) * 0.2);
-    
-                video.style.padding = `${scrollRatio}px`
-                videoEl.style.borderRadius = `${radiusRatio}px`
-            } else {
-                video.style.padding = `${maxPadding}px`
-                videoEl.style.borderRadius = `${maxRadius}px`
-            }
-
-            if (window.innerWidth < 600) {
-                video.style.padding = `0px`;
-                videoEl.style.borderRadius = `0px`
-            }
+            richi.initDynamicElementScroll(video, {
+                minValue: 0,
+                maxValue: 120,
+                offset: 0.2
+            });
         });
     </script>
 </head>
@@ -125,10 +113,7 @@
     </div>
 </dialog>
 <body >
-    <div class="banner-with-header">
-        <div class="banner">Starting in June 2026, <span class="highlight">we are fully migrated to Lyra UI</span>. Still love Rave? <a href="https://lyraaura.vercel.app" target="_blank"> Check out our main website. </a></div>
-        <header></header>
-    </div>
+    <header></header>
     <main id="scroll">
         <section class="section desc intro" id="home">
             <section class="hero">
@@ -138,8 +123,8 @@
                         <p>An interior design, fashion, and graphic design agency that prioritizes function and aesthetics to create comfortable results.</p>
                         <br> 
                         <div class="flex">
-                            <button class="btn xl outline">Our projects<i class="lni lni-arrow-angular-top-right"></i></button>
-                            <button class="btn xl empty">Join with us<i class="lni lni-arrow-angular-top-right"></i></button>
+                            <button class="btn xl outline">Our projects<i class="ri-arrow-right-up-line"></i></button>
+                            <button class="btn xl empty">Join with us<i class="ri-arrow-right-up-line"></i></button>
                         </div>
                     </div>
                 </div>
@@ -253,7 +238,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="flex"><button class="btn xl outline">Lihat proyek lainnya<i class="lni lni-arrow-angular-top-right"></i></button></div>                
+                    <div class="flex"><button class="btn xl outline">Lihat proyek lainnya<i class="ri-arrow-right-up-line"></i></button></div>                
                 </div>
             </div>
         </section>

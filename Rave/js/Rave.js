@@ -357,6 +357,36 @@ export default class Rave {
         elements.forEach(el => observer.observe(el));
     }
 
+    initDynamicElementScroll(selector, options = {}) {
+        const {
+            minValue = 0,
+            maxValue = 60,
+            threshold = 100,
+            offset = 0.2,
+            isTopAndBottomPaddingIncluded = false
+        } = options;
+
+        const elements = document.querySelectorAll(selector);
+        const top = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        elements.forEach(element => {
+            const customThreshold = parseInt(element.dataset.threshold) || threshold;
+
+            if (window.innerWidth < 768) {
+                element.style.padding = "0px";
+                return;
+            }
+
+            let paddingValue = maxValue;
+
+            if (top > customThreshold) {
+                paddingValue = Math.max(minValue, maxValue - ((top - customThreshold) * offset));
+            }
+
+            element.style.padding = `0px ${paddingValue}px`;
+        })
+    }
+
     intersectElements(parentContainer, childElements, transformType, delay = 50) {
         const elements = document.querySelectorAll(childElements);
         const parent = document.querySelectorAll(parentContainer);

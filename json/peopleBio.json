@@ -24,12 +24,12 @@
         "comment_count": 0
     },
     {
-        "name": "Coming soon",
-        "nickname": "Unknown",
+        "name": "Christy Lie (?)",
+        "nickname": "crshyle",
         "image": "./assets/image/member_avatar/crshyle.jpg",
-        "description": "Test",
+        "description": "A mysterious figure in Lyra who joined the dancer team named 'STARGAINZ' placed in Kediri Regency, East Java. We still keep the secret for her real name, but we can call her 'crshyle' for now. <br>She is known as Jessica Noleen's friend at the same school. Not much is known about her, but she is often seen in the background of Lyra's development and is rumored to have a significant role in the future of the project. ",
         "id": "crshyle",
-        "badges": ""
+        "badges": ["Creative Dancer"]
     },
     {
         "name": "Jessica Noleen Alka",

@@ -8,13 +8,21 @@ richi.setHeadTagType("icon", "/assets/logo/lyra.png");
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('Service Worker registered!', reg))
-      .catch(err => console.log('Service Worker registration failed:', err));
+    const isMobile = /Mobi|Android|iPhone|iPod|iPad|BlackBerry|IEMobile/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        navigator.serviceWorker.register('/sw.js')
+       .then(reg => console.log('Service Worker registered!', reg))
+       .catch(err => console.log('Service Worker registration failed:', err));
+    } else {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for (let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
   });
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     richi.setHeadTagType("script", [
