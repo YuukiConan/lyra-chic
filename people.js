@@ -22,42 +22,11 @@ fetch(url)
                 const container = el.closest(".people");
                 const name = el.querySelectorAll(".name h2");
                 const nickname = el.querySelectorAll(".name span");
-                const desc = el.querySelectorAll("p");
-                // const likeBtn = container.querySelector(".people-btns .like-count");
 
-                // Handle like button
-                // if (likeBtn) {
-                //     const saved = parseInt(localStorage.getItem(`likeCount_${person.id}`));
-
-                //     if (!isNaN(saved)) {
-                //         person.like_count = saved;
-                //     }
-
-                //     likeBtn.textContent = person.like_count;
-
-                //     if (!likeBtn.dataset.bound) {
-                //         likeBtn.dataset.bound = "true";
-
-                //         likeBtn.addEventListener("click", () => {
-                //             const liked = likeBtn.classList.toggle("liked");
-
-                //             person.like_count += liked ? 1 : -1;
-                //             likeBtn.textContent = person.like_count;
-
-                //             localStorage.setItem(
-                //                 `likeCount_${person.id}`,
-                //                 person.like_count
-                //             );
-                //         });
-                //     }
-                // }
-
-                // Set name
                 name.forEach(n => {
                     n.textContent = person.name;
                 });
 
-                // Set nickname / alias
                 nickname.forEach(nick => {
                     let text = person.nickname.replace(/&bull;/g, "/");
 
@@ -68,33 +37,6 @@ fetch(url)
                     }
 
                     nick.textContent = text;
-                });
-
-                // Set description
-                desc.forEach(p => {
-                    p.textContent = "";
-
-                    if (!person.description?.trim()) {
-                        p.textContent = "Tidak ada biografi";
-                        p.classList.add("empty");
-                        return;
-                    }
-
-                    const lines = person.description
-                        .replace(/&bull;/g, "•")
-                        .split("<br>");
-
-                    const fragment = document.createDocumentFragment();
-
-                    lines.forEach((line, i) => {
-                        fragment.appendChild(document.createTextNode(line.trim()));
-
-                        if (i < lines.length - 1) {
-                            fragment.appendChild(document.createElement("br"));
-                        }
-                    });
-
-                    p.appendChild(fragment);
                 });
 
                 const profileImg = container.querySelector(".people-img img");

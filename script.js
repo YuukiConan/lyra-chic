@@ -29,12 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://unpkg.com/lenis@1.3.20/dist/lenis.min.js"
     ])
     richi.setHeadTagType("stylesheet", "https://unpkg.com/lenis@1.3.20/dist/lenis.css")
-    
-    window.addEventListener('pageshow', (e) => {
-        if (e.persisted) {
-            console.log("Lyra Aura Beta Stage 1")
-        }
-    })
 
     var Lenis = window.Lenis;
     const lenis = new Lenis({
@@ -96,13 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const isAnimEnabled = localStorage.getItem('anim-mode') === 'enabled';
     if (isAnimEnabled) { 
         document.body.classList.add('anim-disabled');
-    }
-    
-    const netralizeState = localStorage.getItem('netralize') === 'true';
-    if (netralizeState) {
-        document.body.classList.add('netralize');
-    } else {
-        document.body.classList.remove('netralize');
     }
     
     let intervalId;

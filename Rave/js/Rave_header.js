@@ -139,35 +139,8 @@ fetch(url).then(response => response.text()).then(html => {
     const overlay = document.querySelector('.overlay');
     const menuButtons = document.querySelectorAll('.menuButton');
     const brand = document.querySelector('.nav-pane .footer');
-    const previews = document.querySelectorAll('.preview-item');
     let isAnimating = false;
-
-    menuButtons.forEach(btn => {
-        const targetItemClass = btn.id + "-item";
-        const target = document.querySelector('.' + targetItemClass);
-        btn.addEventListener('mouseenter', () => {
-            previews.forEach(p => p.classList.remove('show'));
-            target.classList.add('show');
-        })
-        
-        btn.addEventListener('mouseleave', () => {
-            requestAnimationFrame(() => {
-                target.style.animation = 'fadeOut .5s';
-
-                target.addEventListener('animationend', () => {
-                    if (target.style.animation.includes('fadeOut')) {
-                        target.classList.remove('show')
-                        
-                    }
-                }, {once: true})
-            })
-        })
-    })
-
-    const content = document.querySelector('.nav-pane .content');
-    content.addEventListener('mouseleave', () => {
-        previews.forEach(p => p.classList.remove('show'));
-    })
+    
     
     function openNavPane() {
         overlay.classList.add('showOverlay');

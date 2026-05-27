@@ -3,7 +3,6 @@ const ASSETS = [
   '/',
   '/index.html',
   '/richi_styles.css',
-  '/script.js'
 ];
 
 // 1. Install Event: Cache essential assets

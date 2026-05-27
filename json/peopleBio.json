@@ -1,14 +1,5 @@
 [
     {
-        "name": "Yuuki Conan",
-        "description": "Former Japanese-Indonesian soccer player • programmer • lead developer at Keyza Richi.",
-        "nickname": "Yuuki",
-        "image": "./assets/logo/YuukiC.com_new logo_big.webp",
-        "id": "yuuki",
-        "like_count": 0,
-        "comment_count": 0
-    },
-    {
         "name": "Nathania Anneta Wayak Payong",
         "description": "Nathania Anneta, exclusively known as Nia or Neta, is a Yuuki’s new assistant developer, actress and model that often helps Yuuki to test new features in Lyra before they’re released to the public. <br><br>In addition to her work as a developer, Nia is also known for her captivating performances and stunning looks when she become the photogenic champion of Kediri Regency in 2025. With her unique blend of technical expertise and creative talent, Nia is a valuable asset to the Keyza Richi team and a rising star in the entertainment industry.",
         "nickname": "Nia &bull; Neta",
@@ -24,10 +15,10 @@
         "comment_count": 0
     },
     {
-        "name": "Christy Lie (?)",
-        "nickname": "crshyle",
+        "name": "Carin Miracle",
+        "nickname": "Carin",
         "image": "./assets/image/member_avatar/crshyle.jpg",
-        "description": "A mysterious figure in Lyra who joined the dancer team named 'STARGAINZ' placed in Kediri Regency, East Java. We still keep the secret for her real name, but we can call her 'crshyle' for now. <br>She is known as Jessica Noleen's friend at the same school. Not much is known about her, but she is often seen in the background of Lyra's development and is rumored to have a significant role in the future of the project. ",
+        "description": "A mysterious figure in Lyra who joined the dancer team named 'ST☆RGΛINZ' placed in Kediri Regency, East Java. We still keep the secret for her real name, but we can call her 'crshyle' for now. <br>She is known as Jessica Noleen's friend at the same school. Not much is known about her, but she is often seen in the background of Lyra's development and is rumored to have a significant role in the future of the project. ",
         "id": "crshyle",
         "badges": ["Creative Dancer"]
     },
