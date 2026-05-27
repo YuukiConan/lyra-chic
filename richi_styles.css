@@ -49,6 +49,9 @@ a {
     opacity: 1;
     transform: translateY(0px);
 }
+.people *.visible .name::before {
+    width: 100%;
+}
 
 .video-container, .image-container {
     padding: 70px 90px;

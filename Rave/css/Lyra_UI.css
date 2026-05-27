@@ -133,7 +133,8 @@ body.high-contrast main {
 ::-webkit-scrollbar,
 .scrollbar-track {
     border-radius: 50px;
-    width: 8px;
+    display: none;
+    width: 0px;
     background-color: var(--surface-color) !important;
     border-radius: 50px;
 }
@@ -148,9 +149,7 @@ body.high-contrast main {
 .scrollbar-thumb {
     background-color: rgb(120, 120, 120);
     border-radius: 50px;
-    width: 8px;
-    position: relative;
-    right: 5px;
+    width: 0px;
 }
 
 :root.dark-mode ::-webkit-scrollbar-thumb {
@@ -1042,7 +1041,6 @@ header.no-blend {
     justify-content: space-between;
     align-items: center;
     padding:2px 34px 2px 34px;
-    border-bottom: 1px solid rgba(100, 100, 100, 0.1);
     will-change: transform;
     transition: transform 1s cubic-bezier(0.075, 0.81, 0.265, 1), opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1), padding .3s cubic-bezier(0.075, 0.81, 0.265, 1) !important;
 }
@@ -1051,9 +1049,8 @@ header.no-blend {
     background-color: var(--background-color);
 }
 
-
 .banner-with-header:has(.header-container.hide) {
-    transform: translateY(-150px);
+    transform: scale(0.97);
 }
 
 .header-container.scrolled .navBtn a,
@@ -1562,8 +1559,6 @@ body.dyslexia :is(p, h1, h2, h3, h4, h5, h6, span, a) {
 
 main,
 #scroll {
-    margin-top: 20px;
-    overflow-x: hidden;
     transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -1608,10 +1603,11 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
 }
 
 .section-header.inline {
-    margin: 10px 3.5% 10px 2.5% ;
+    margin: 0px 3.5% 0px 2.5% ;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -1660,7 +1656,7 @@ div {
 }
 
 .section-header.large {
-    margin: 5.5% 0.5em 12px 0.8em;
+    margin: 5.5% 0.5em 0px 0.8em;
 }
 .section-header.large .section-title {
     font-family: "Source Serif 4", serif !important;
@@ -2614,8 +2610,28 @@ div {
     width: 100%;
     transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1), border-top .5s cubic-bezier(0.165, 0.84, 0.44, 1);
     margin: 0px 0px 10px 0px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(100, 100, 100, 0.3);
+    padding-top: 6px;
+    position: relative;
+}
+
+.people .name::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0%;
+    background-color: var(--bg-icon-color);
+    height: 1px;
+    transition: width 2s ease, background-color .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.people:hover .name::before {
+    background-color: var(--primary-color);
+}
+
+.people *.visible .name::before {
+    width: 100%;
 }
 
 .people .people-bio {
@@ -5947,7 +5963,7 @@ footer .adaptive-logo {
 }
 @media (max-width: 1024px) {
     main {
-        margin-top: 60px;
+        margin-top: 50px;
     }
     .intro {
         padding: 3.5em 0 20px 0 !important;
@@ -5965,7 +5981,7 @@ footer .adaptive-logo {
         display: flex;
     }
     .toggleTheme {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .hero {
         margin: 1em 0 3em 0 !important;
@@ -6004,7 +6020,7 @@ footer .adaptive-logo {
     }
     .section-header.large .section-title {
         font-size: 4.5rem;
-        margin: 0px 16px 10px 16px;
+        margin: 0px 8px 10px 8px;
     }
     .flex-grids {
         margin: 0 2em;
@@ -6013,7 +6029,7 @@ footer .adaptive-logo {
         padding: 1em 0;
     }
     .section-header {
-        margin: 0 0.3em;
+
     }
 
     .section-title {
@@ -6022,6 +6038,7 @@ footer .adaptive-logo {
 
     .section-desc {
         font-size: 14px;
+        margin: 0;padding:0;
     }
     
     
@@ -6159,13 +6176,21 @@ footer .adaptive-logo {
 }
 
 @media (max-width: 768px) {
+    .equal {
+        transform: none;
+    }
     .logo {
         position: relative;
-        left: -6px;
-        transform: scale(1.1);
+        left: -10px;
+        width: 120px !important;
     }
     .actions {
-        padding: 9px 10px;
+        padding: 0;
+        gap: 10px;
+    }
+    .actionsBtns {
+        padding: 0;
+        gap: 10px;
     }
     .contact-button {
         display: none;
@@ -6220,7 +6245,7 @@ footer .adaptive-logo {
     }
 }
     ::-webkit-scrollbar {
-        width: 5px;
+        width: 0px;
     }
     dialog {
         min-width: 100%;
@@ -6340,7 +6365,7 @@ footer .adaptive-logo {
         justify-content: flex-start;
         gap: 0;
         width: auto;
-        margin: 0px 8px 0px 8px !important;
+        margin: 0px 4px 0px 4px !important;
         
     }
     .section-header.stylish .section-title {
