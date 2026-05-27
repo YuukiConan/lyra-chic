@@ -2564,7 +2564,7 @@ div {
     row-gap: 2px;
     width: 100%;
     transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1), border-top .5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 8px 0px;
     padding-top: 6px;
     position: relative;
 }
@@ -2603,9 +2603,9 @@ div {
 .people .name h2 {
     color: var(--text-color);
     font-size: 14px;    
-    font-family: "JetBrains Mono", monospace !important;
+    font-family: "Source Serif 4", monospace !important;
     font-weight: 450;
-    text-transform: uppercase;
+    font-style: italic;
     transition: none;
     
 }
@@ -2614,8 +2614,9 @@ div {
     position: relative;
     text-align: right;
     font-size: 14px;    
-    text-transform: uppercase;
-    font-family: "JetBrains Mono", sans-serif !important;
+    text-transform: normal;
+    font-style: italic;
+    font-family: "Source Serif 4", sans-serif !important;
 }
 
 .people .people-bio span {
@@ -5016,11 +5017,19 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     gap: 7px;
 }
 
+@font-face {
+    font-family: "Source Serif 4";
+    src: url("./fonts/SourceSerif4-Italic.ttf") format('truetype'); /* fix sementara */
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
 .side-panel .name h2 {
     color: var(--text-color);
     font-size: 28px;
-    font-family: "Source Serif 4" !important;
-    font-weight: 500;
+    font-family: "Source Serif 4";
+    font-weight: 450;
     font-style: italic;
 }
 
@@ -6129,8 +6138,8 @@ footer a:hover {
         width: 100%;
     }
     .people .name {
-        padding-top: 6px;
-        margin-bottom: 10px;
+        padding-top: 4px;
+        margin-bottom: 8px;
         width: 100%;
         flex-direction: row;
         align-items: center;
