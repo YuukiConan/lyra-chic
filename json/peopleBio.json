@@ -29,12 +29,38 @@
         "image": "./assets/image/jessica_noleen/Jessica.png",
         "id": "jessica",
         "aliases": "jessie m wolen"
-    }, {
+    }, 
+    {
         "name": "Natalia Jessica Lisianto",
         "description": "A mechanical engineering student and contributor to Lyra who is passionate about robotics, machine design, and automation.",
         "nickname": "Natalia",
         "aliases": "",
         "image": "./assets/image/member_avatar/natalia_jessica.webp",
         "id": "natalia"
+    }, 
+    {
+        "name": "Monique Tri Tunggadewi",
+        "description": "This character is coming soon. Stay tune!",
+        "nickname": "Monique",
+        "aliases": "",
+        "image": "./assets/image/member_avatar/monnn.webp",
+        "id": "monique"
+    }, 
+    {
+        "name": "Rhiannon Ava Mae",
+        "description": "This character is coming soon. Stay tune!",
+        "nickname": "Mae",
+        "aliases": "",
+        "image": "./assets/image/member_avatar/mae.webp",
+        "id": "mae"
+    }
+    ,
+    {
+        "name": "Miracel Charis Gracia",
+        "description": "This character is coming soon. Stay tune!",
+        "nickname": "Charis",
+        "aliases": "",
+        "image": "./assets/image/member_avatar/charis.webp",
+        "id": "charis"
     }
 ]
