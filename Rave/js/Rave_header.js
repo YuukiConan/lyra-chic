@@ -4,9 +4,9 @@ fetch(url).then(response => response.text()).then(html => {
     document.querySelector('header').innerHTML = html;
 
     function switchToDarkMode(toggleElement, checkbox, iconSelector) {
-        const toggle = document.querySelector(toggleElement);
+        const toggles = document.querySelectorAll(toggleElement);
         const cbx = document.querySelector(checkbox);
-        const icon = document.querySelector(iconSelector);
+        const icons = document.querySelectorAll(iconSelector);
 
         const storage = localStorage.getItem('darkMode');
 
@@ -16,11 +16,13 @@ fetch(url).then(response => response.text()).then(html => {
 
         applyTheme(isDark);
 
-        toggle.addEventListener('click', () => {
-            const enabled = !document.documentElement.classList.contains('dark-mode');
-            applyTheme(enabled)
-            localStorage.setItem("darkMode", enabled);
-            cbx.checked = enabled;
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const enabled = !document.documentElement.classList.contains('dark-mode');
+                applyTheme(enabled)
+                localStorage.setItem("darkMode", enabled);
+                cbx.checked = enabled;
+            })
         })
 
         function applyTheme(isEnabled) {
@@ -29,10 +31,12 @@ fetch(url).then(response => response.text()).then(html => {
 
             cbx.checked = isEnabled;
 
-            if (icon) {
-                icon.classList.toggle('ri-moon-clear-line', isEnabled);
-                icon.classList.toggle('ri-sun-line', !isEnabled);
-            }
+            icons.forEach(icon => {
+                if (icon) {
+                    icon.classList.toggle('ri-moon-clear-line', isEnabled);
+                    icon.classList.toggle('ri-sun-line', !isEnabled);
+                }
+            })
         }
     }
 
@@ -139,8 +143,6 @@ fetch(url).then(response => response.text()).then(html => {
     const overlay = document.querySelector('.overlay');
     const menuButtons = document.querySelectorAll('.menuButton');
     const brand = document.querySelector('.nav-pane .footer');
-    let isAnimating = false;
-    
     
     function openNavPane() {
         overlay.classList.add('showOverlay');

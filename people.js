@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bio = panel.querySelector('.people-bio h1');
     const img = panel.querySelector('.people-img');
     const badges = panel.querySelector('.badge-container');
-    const peopleCtr = document.querySelector('.people-container');
+    const peopleCtr = document.querySelector('.grid');
     const activeMembers = ["anneta", "crshyle", "jessica", "natalia", "monique", "mae", "charis"];
     let hiddenCounts = 0;
 

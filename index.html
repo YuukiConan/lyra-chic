@@ -43,8 +43,7 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" href="./Rave/css/Lyra_UI.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" href="./richi_styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <link rel="preload" href="./fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
+    
 
     <!-- ================= STYLES ================= -->
     <link rel="stylesheet" href="./Rave/css/Lyra_UI.css">
@@ -116,24 +115,25 @@
     <header></header>
     <main id="scroll">
         <section class="section desc intro" id="home">
-            <section class="hero">
-                <div class="hero-section">
-                    <div class="hero-caption">
-                        <h1 class="role" data-lang="welcome">We design thoughtful, livable spaces that feel close to you<span class="highlight"></span></h1>
-                        <p>An interior design, fashion, and graphic design agency that prioritizes function and aesthetics to create comfortable results.</p>
-                        <br> 
-                        <div class="flex">
-                            <button class="btn xl outline">Our projects<i class="ri-arrow-right-up-line"></i></button>
-                            <button class="btn xl empty">Join with us<i class="ri-arrow-right-up-line"></i></button>
-                        </div>
+            <div class="hero-section">
+                <div class="hero-top">
+                    <h1>Think. Design. <span class="marker-highlight">Be Success</span></h1>
+                    <h2 data-lang="hero-section-intro-desc">We fuse the structural elegance of interior design, modern fashion, combining with the bold and dynamic pulse of art. Discover a curated projects where your brand's lifestyle is brought to life. </h2>
+                    <br> 
+                    <div class="flex">
+                        <a href="/build.html"><button class="btn xl outline">Our projects<i class="ri-arrow-right-up-line"></i></button></a>
+                        <button class="btn xl empty">Join with us<i class="ri-arrow-right-up-line"></i></button>
                     </div>
                 </div>
-            </section>
-            <div class="video-container">
-                <video class="video" muted loop autoplay preload="metadata" fetchpriority="high" poster="./assets/video/demo-frame-01.png">
-                    <source src="./assets/video/demo.mp4" type="video/mp4">
-                    Your browser doesn't support video container.
-                </video>
+                <pre>Scroll down</pre>
+                <div class="hero-bottom">
+                    <div class="video-container" data-threshold="0">
+                        <video class="video" muted loop autoplay preload="metadata" fetchpriority="high" poster="./assets/video/demo-frame-01.png">
+                            <source src="./assets/video/demo.mp4" type="video/mp4">
+                            Your browser doesn't support video container.
+                        </video>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section">

@@ -11,8 +11,7 @@
             "itswayyp"
         ],
         "tiktok": "",
-        "like_count": 0,
-        "comment_count": 0
+        "badges": ["Main Developer", "Creative Leader"]
     },
     {
         "name": "Carin Miracle",
@@ -20,39 +19,43 @@
         "image": "./assets/image/member_avatar/crshyle.jpg",
         "description": "A mysterious figure in Lyra who joined the dancer team named 'ST☆RGΛINZ' placed in Kediri Regency, East Java. We still keep the secret for her real name, but we can call her 'crshyle' for now. <br>She is known as Jessica Noleen's friend at the same school. Not much is known about her, but she is often seen in the background of Lyra's development and is rumored to have a significant role in the future of the project. ",
         "id": "crshyle",
-        "badges": ["Creative Dancer"]
+        "badges": ["Creative Dancer", "3rd place winner of School Contest Dance 2025🏆🥉", "ST☆RGΛINZ Member"]
     },
     {
         "name": "Jessica Noleen Alka",
-        "description": "Music producer and member of keyzarichi.org in the fashion industry.",
+        "description": "Jessica Noleen, also known as Jessica, is a music producer and artist who contribute to Lyra by creating original music and sound effects for the project. She is known for her unique style and ability to create immersive audio experiences that enhance the overall user experience of Lyra.",
         "nickname": "Jessica",
         "image": "./assets/image/jessica_noleen/Jessica.png",
         "id": "jessica",
-        "aliases": "jessie m wolen"
+        "aliases": "jessie m wolen",
+        "badges": ["Music Producer"]
     }, 
     {
         "name": "Natalia Jessica Lisianto",
-        "description": "A mechanical engineering student and contributor to Lyra who is passionate about robotics, machine design, and automation.",
+        "description": "Natalia is a student and contributor to Lyra who is passionate about robotics, machine design, and automation.",
         "nickname": "Natalia",
         "aliases": "",
         "image": "./assets/image/member_avatar/natalia_jessica.webp",
-        "id": "natalia"
+        "id": "natalia",
+        "badges": ["Robotics Enthusiast"]
     }, 
     {
         "name": "Monique Tri Tunggadewi",
-        "description": "This character is coming soon. Stay tune!",
+        "description": "Monique is Noleen and Carin's first friend at school. She is a student and contributor to Lyra who is passionate about fashion, design, and creativity.",
         "nickname": "Monique",
         "aliases": "",
         "image": "./assets/image/member_avatar/monnn.webp",
-        "id": "monique"
+        "id": "monique",
+        "badges": ["Fashion Designer", "Creative Illustrator"]
     }, 
     {
         "name": "Rhiannon Ava Mae",
-        "description": "This character is coming soon. Stay tune!",
+        "description": "Mae is Noleen and Carin's second friend at school. Known as her extroverted nature and infectious laughter, Mae is a student and contributor to Lyra who is passionate about performing arts, music, and entertainment.",
         "nickname": "Mae",
         "aliases": "",
         "image": "./assets/image/member_avatar/mae.webp",
-        "id": "mae"
+        "id": "mae",
+        "badges": ["Performer", "Music Enthusiast"]
     }
     ,
     {

@@ -1,51 +1,81 @@
 <header class="header">
     <div class="header-container">
-        <div class="brand">
-            <a href="./index.html"><img class="logo adaptive-logo" src="./assets/logo/lyra.webp" fetchpriority="high" loading="eager" alt="Lyra logo" /></a>
-
-        </div>
-        <div class="actions">
-            <div class="navigation">
-                <div class="drop-down">
-                    <button class="navBtn"><a href="./projects.html" data-lang="home">Work</a></button>
-                    <div class="drop-down-content">
-                        <a href="./interior.html"><button class="drop-down-button">Interior design</button></a>
-                        <a href="./fashion.html"><button class="drop-down-button">Fashion and Muse</button></a>
-                        <a href="./graphics.html"><button class="drop-down-button">UI/UX Designer</button></a>
+        <div class="header-desktop">
+            <div class="brand">
+                <a href="./index.html"><img class="logo adaptive-logo" src="./assets/logo/lyra.webp" fetchpriority="high" loading="eager" alt="Lyra logo" /></a>
+                <span class="product">
+                    Charm of Nia
+                </span>
+            </div>
+            <div class="actions">
+                <div class="navigation">
+                    <div class="drop-down">
+                        <button class="navBtn"><a href="./projects.html" data-lang="home">Work</a></button>
+                        <div class="drop-down-content">
+                            <a href="./interior.html"><button class="drop-down-button">Interior design</button></a>
+                            <a href="./fashion.html"><button class="drop-down-button">Fashion and Muse</button></a>
+                            <a href="./graphics.html"><button class="drop-down-button">UI/UX Designer</button></a>
+                        </div>
+                    </div>
+                    <button class="navBtn"><a href="./blog.html">Blog</a></button>
+                    <button class="navBtn"><a href="./about.html">About</a></button>
+                </div>
+                <div class="actionsBtns">
+                    <div>
+                        <input type="checkbox" id="cbx" name="changetheme" hidden />
+                        <button class=" empty toggleTheme" id="toggleTheme"><i class="" id="themeIcon"></i></button>
+                    </div>
+                    <div>
+                        <button class="navBtn btn medium accent contact-button" aria-label="contact Lyra button"><span>Contact</span> <i class="ri-arrow-right-up-line"></i></button>
+                    </div>
+                    <div class="hidden">
+                        <button class="navBtn" id="cart" data-tooltip="Keranjang Anda">
+                            <i class="uil uil-shopping-bag"></i>
+                            <div class="promo small" id="cart-number">0</div>
+                        </button>
+                        <dialog id="cart-dialog">
+                            <h1>Keranjang Anda</h1>
+                            <p>Konten ini akan segera tersedia di Lyra!</p>
+                            <div class="dialog-btns">
+                                <button id="close1" class="btn accent">tutup</button>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
-                <button class="navBtn"><a href="./blog.html">Blog</a></button>
-                <button class="navBtn"><a href="./about.html">About</a></button>
             </div>
-            <div class="actionsBtns">
-                <div>
-                    <input type="checkbox" id="cbx" name="changetheme" hidden />
-                    <button class=" empty toggleTheme" id="toggleTheme"><i class="" id="themeIcon"></i></button>
-                </div>
-                <div>
-                    <button class="navBtn btn medium accent contact-button" aria-label="contact Lyra button">Contact <i class="ri-arrow-right-up-line"></i></button>
-                </div>
-                <div>
-                    <button class="navBtn hamburger" aria-label="hamburger button to open the hamburger menu" id="hamburger" >
-                        <div class="equal">
-                            <div class="div1"></div>
-                            <div class="div2"></div>
-                            <div class="div3"></div>
-                        </div>
-                    </button>
-                </div>
-                <div class="hidden">
-                    <button class="navBtn" id="cart" data-tooltip="Keranjang Anda">
-                        <i class="uil uil-shopping-bag"></i>
-                        <div class="promo small" id="cart-number">0</div>
-                    </button>
-                    <dialog id="cart-dialog">
-                        <h1>Keranjang Anda</h1>
-                        <p>Konten ini akan segera tersedia di Lyra!</p>
-                        <div class="dialog-btns">
-                            <button id="close1" class="btn accent">tutup</button>
-                        </div>
-                    </dialog>
+        </div>
+        <div class="header-mobile">
+            <div>
+                <input type="checkbox" id="cbx" name="changetheme" hidden />
+                <button class=" empty toggleTheme" id="toggleTheme"><i class="ri-sun-line" id="themeIcon"></i></button>
+            </div>
+            <div class="brand">
+                <a href="./index.html"><img class="logo adaptive-logo" src="./assets/logo/lyra.webp" fetchpriority="high" loading="eager" alt="Lyra logo" /></a>
+            </div>
+            <div class="actions">
+                <div class="actionsBtns">
+                    <div>
+                        <button class="navBtn hamburger" aria-label="hamburger button to open the hamburger menu" id="hamburger" >
+                            <div class="equal">
+                                <div class="div1"></div>
+                                <div class="div2"></div>
+                                <div class="div3"></div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="hidden">
+                        <button class="navBtn" id="cart" data-tooltip="Keranjang Anda">
+                            <i class="uil uil-shopping-bag"></i>
+                            <div class="promo small" id="cart-number">0</div>
+                        </button>
+                        <dialog id="cart-dialog">
+                            <h1>Keranjang Anda</h1>
+                            <p>Konten ini akan segera tersedia di Lyra!</p>
+                            <div class="dialog-btns">
+                                <button id="close1" class="btn accent">tutup</button>
+                            </div>
+                        </dialog>
+                    </div>
                 </div>
             </div>
         </div>

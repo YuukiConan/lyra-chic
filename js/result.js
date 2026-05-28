@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const searchResult = data.filter(item => item.title.toLowerCase().includes(searchText) || item.description.toLowerCase().includes(searchText));
-            const flex = document.querySelector('.people-container');
+            const flex = document.querySelector('.grid');
             const resultCount = searchResult.length;
 
             if (resultCount > 0) {
