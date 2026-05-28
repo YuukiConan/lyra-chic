@@ -4527,6 +4527,10 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     animation: fadeIn .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.navBtn:hover a {
+    padding: 12px 6px 12px 8px;
+}
+
 :root.dark-mode .hamburger.active .equal div, :root.dark-mode .hamburger .equal div {
     filter: invert(0);
 }
@@ -4544,6 +4548,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: inline-block;
     padding: 12px 4px;
     vertical-align: middle;
+    transition: padding .5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .navBtn.active a {
