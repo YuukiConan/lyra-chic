@@ -2,7 +2,7 @@ const CACHE_NAME = 'v1.00';
 const ASSETS = [
   '/',
   '/index.html',
-  '/richi_styles.css',
+  '/richi_styles.css'
 ];
 
 // 1. Install Event: Cache essential assets

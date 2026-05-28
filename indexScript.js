@@ -4,7 +4,7 @@ richi.initializeIndexPath();
 
 const peopleImg = document.querySelectorAll(".people .people-img img");
 peopleImg.forEach((e) => {
-    e.setAttribute("fetchpriotity", "low");
+    e.setAttribute("fetchpriority", "high");
 });
 const dialogBetaWarning = document.getElementById("myDialog"),
 disableMsg = document.getElementById("disable-early-message"),
