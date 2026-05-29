@@ -7,16 +7,14 @@
   <img src="assets/logo/lyra.png" alt="Lyra logo">
 </div>
 
-Creative agency website focused on interior, fashion, and graphic experiences.
-
-__DEMO__ > __https://lyraaurania.vercel.app__
-
-![Richi's Showcase](Keyza_Richi_Showcase.webp)
-
 ## About
 Lyra Chic is an interior, fashion, and graphic design agency website that prioritizes function and usability, thus making customers feel comfortable. 
 
 Using the Lyra UI micro-framework, Lyra Chic delivers an elegant experience with consistent editorial serif design, a clear purpose, and a well-articulated layout. 
+
+__DEMO__ > __https://lyraaurania.vercel.app__
+
+![Richi's Showcase](Keyza_Richi_Showcase.webp)
 
 ## Key Features
 1. Responsive design powered with Lyra UI
