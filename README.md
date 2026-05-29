@@ -4,7 +4,7 @@
 ![Made with](https://img.shields.io/badge/Made%20with-HTML%20CSS%20%20JS-orange)
 
 <div align="center">
-  <img src="assets/logo/lyra.png" alt="Description of image">
+  <img src="assets/logo/lyra.png" alt="Lyra logo">
 </div>
 
 Creative agency website focused on interior, fashion, and graphic experiences.
