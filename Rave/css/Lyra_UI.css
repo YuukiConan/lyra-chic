@@ -5537,9 +5537,15 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     .menuButton {
         border-radius: 0;
         font-size: 2.5rem;
+        transform: none;
+        opacity: 1;
         border-bottom: 1px solid rgba(100, 100, 100, 0.1);
     }
-    
+    .menuButton, .nav-pane .footer, .nav-pane .footer.fade-in {
+        transform: none;
+        animation: none;
+        opacity: 1;
+    }
     .nav-pane {
         padding:0 16px;
         background-color: var(--background-color);
@@ -5647,7 +5653,7 @@ footer {
     border-bottom: 1px solid var(--bg-icon-color);
 }
 
-.footer-section h1 {
+    .footer-section h1 {
     font-family: 1.6rem;
     font-weight: 500;
     margin: 0;
@@ -6092,6 +6098,11 @@ footer a:hover {
         justify-content: center;
         order: 1;
     }
+    .footer-section h1 {
+    font-size: 1.2rem !important;
+    font-weight: 500;
+    margin: 0;
+}
 }
 
 @media (max-width: 768px) {
@@ -6118,7 +6129,7 @@ footer a:hover {
     }
     @keyframes fadeInUpSmooth {
     from {
-        transform: translateY(0px);
+        transform: translateY(0);
         opacity: 0;
         border-radius: 0px;
     } to {

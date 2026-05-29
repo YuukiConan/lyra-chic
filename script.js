@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('hide');
         }
 
-        const reachFooter = e.scroll + innerHeight >= offsetTop + 400;
+        const reachFooter = e.scroll + innerHeight >= offsetTop;
         if (reachFooter) {
             header.classList.add('hide');
         } else {

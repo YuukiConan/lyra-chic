@@ -186,7 +186,7 @@ fetch(url).then(response => response.text()).then(html => {
         let duration = 9;
         
         if (window.innerWidth <= 768) {
-            delay = 280;
+            delay = 0;
             duration = 3;
         }
         
@@ -217,7 +217,7 @@ fetch(url).then(response => response.text()).then(html => {
                     header.classList.remove('no-blend');
                     setTimeout(() => {
                         btn.classList.remove('no-pointer');
-                    }, 1000) 
+                    }, 50) 
                 }
             }, {once: true});
         });
