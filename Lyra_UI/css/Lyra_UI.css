@@ -4961,7 +4961,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     background-color: var(--bg-icon-color) !important;
     width: 100%;
     height: 390px;
-    margin-bottom: -5.8em;
+    margin-bottom: -5.7em;
 }
 .side-panel .people-banner.no-image {
     margin-bottom: 0;
@@ -5563,16 +5563,16 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         height: 70px;
     }
     
-    .menu:last-child {
-        border-bottom: none;
-    }
     .menuButton {
         border-radius: 0;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         transform: none;
         opacity: 1;
+        justify-content: flex-start;
+        text-align: center;
         border-bottom: 1px solid rgba(100, 100, 100, 0.1);
     }
+    
     .menuButton, .nav-pane .footer, .nav-pane .footer.fade-in {
         transform: none;
         animation: none;
@@ -5580,6 +5580,8 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     }
     .nav-pane {
         padding:0 16px;
+        width: 360px;
+        inset: 0 0 0 auto;
         background-color: var(--background-color);
     }
     .nav-container {
@@ -5591,11 +5593,11 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-end;
+        justify-content: flex-start;
         width: 100%;
         height: 100%;
         position: relative; top: 0; transform: none;
-        margin: 0;
+        margin: 5em 0 0 0;
         padding: 0 0px !important;
         overflow: hidden;
     }
@@ -5607,12 +5609,34 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         visibility: hidden;
     }
     .nav-pane .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
         position: relative;
-        right: 0;
-        gap: 16px;
-        padding: 10px 0px 20px 10px;
+        top: 0;
+        gap: 12px;
+        padding: 10px 20px 20px 20px;
     }
-    
+    .chat {
+        display: none;
+    }
+    .nav-pane .footer .chat-alt {
+        box-sizing: border-box;
+        position:relative;
+        display: flex;
+        margin: 0;
+        width: 100% !important;
+        max-width: none !important;
+    }
+    .nav-pane .footer .footer-flex-1 {
+        display: flex;
+        width: 100%;
+    }
+    .nav-pane .footer .footer-flex-1 .btn {
+        flex: 1;
+        width: 100%;
+    }
     header:has(.nav-pane:not(.hidden)) :is(.product, .logo) {
         opacity: 0;
         transform: translateY(0px) !important;
@@ -5620,6 +5644,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     .nav-pane .content-item {
         justify-content: flex-end;
         gap: 10px;
+        margin: 10px 0;
     }
     .nav-pane .content-item.flex {
         display: none;
@@ -6351,7 +6376,6 @@ footer a:hover {
     .side-panel {
         inset: 0;
         width: 100%;
-        animation: fadeInUp .8s cubic-bezier(0.19, 1, 0.22, 1);
     }
     .side-panel:has(.people-type.alt) {
         width: 100%;
