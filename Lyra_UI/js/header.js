@@ -173,7 +173,7 @@ fetch(url).then(response => response.text()).then(html => {
         }
         
         requestAnimationFrame(() => { 
-            navpane.style.animation = `fadeInUpSmooth .${duration}s cubic-bezier(0.475, 0.12, 0.165, 1)`;
+            navpane.style.animation = `fadeInRight .${duration}s cubic-bezier(0.475, 0.12, 0.165, 1)`;
             btn.classList.add('no-pointer');
             navpane.classList.remove('hidden');
             setTimeout(() => {
@@ -208,7 +208,7 @@ fetch(url).then(response => response.text()).then(html => {
         requestAnimationFrame(() => {
             btn.classList.remove('active');
             setTimeout(() => {
-                navpane.style.animation = `fadeOutUpSmooth .${duration}s cubic-bezier(0.8, 0.292, 0.333, 1)`;
+                navpane.style.animation = `fadeOutRight .${duration}s cubic-bezier(0.8, 0.292, 0.333, 1)`;
             }, delay);
             
             overlay.classList.remove('showOverlay');
