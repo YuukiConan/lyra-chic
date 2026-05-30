@@ -37,17 +37,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <link rel="preload" href="./Rave/css/Lyra_UI.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="./Lyra_UI/css/Lyra_UI.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" href="./richi_styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 
     <!-- ================= STYLES ================= -->
-    <link rel="stylesheet" href="./Rave/css/Lyra_UI.css">
+    <link rel="stylesheet" href="./Lyra_UI/css/Lyra_UI.css">
     <link rel="stylesheet" href="./richi_styles.css" />
     
     <!-- ================= SCRIPTS (ES MODULES) ================= -->
-    <script type="module" defer nonce="random123" src="./Rave/js/Rave_header.js"></script>
-    <script type="module" defer nonce="random123" src="./Rave/js/Rave.js"></script>
-    <script type="module" nonce="random123" src="./Rave/js/Rave_footer.js"></script>
+    <script type="module" defer nonce="random123" src="./Lyra_UI/js/header.js"></script>
+    <script type="module" defer nonce="random123" src="./Lyra_UI/js/main.js"></script>
+    <script type="module" nonce="random123" src="./Lyra_UI/js/footer.js"></script>
     <script type="module" nonce="random123" src="./indexScript.js"></script>
     <script type="module" defer nonce="random123" src="./script.js"></script>
     <title></title>
@@ -92,32 +92,38 @@
                 <div>
                     <span class="min-topbar" id="people-topbar"></span>
                 </div>
-                <button class="btn empty" id="close-panel"><span class="div-1"></span><span class="div-2"></span></button>
+                <button class="btn" id="close-panel"><span class="div-1"></span><span class="div-2"></span></button>
             </div>
             <div class="people-bio">
-                <div class="people-info alt">
+                <div class="people-type alt">
+                    <div class="people-banner">
+                        <img src="" />
+                    </div>
                     <div class="people-img centered">
                         <img src="" />
                     </div>
-                    <div>
+                    <div class="people-name">
                         <div class="name">
                             <h2></h2>
                             <span class="nickname"></span>
                         </div>
-                        <div class="people-btns"></div>
                     </div>
                 </div>
-                <h1 class="divider">Badges / Awards</h1>
-                <div class="badge-container">
-                    
+                <div class="people-info">
+                    <div class="badge-container">
+                        
+                    </div>
+                    <h1 class="divider">Description</h1>
+                    <p></p>
+                    <h1 class="divider">Social Media</h1>
+                    <div class="people-btns"></div>
                 </div>
-                <h1 class="divider">Description</h1>
-                <p></p>
             </div>
         </div>
         <section class="section" id="team">
-            <div class="section-header isTitle">
-                <h1 class="section-title">Meet our people, get to <i>know</i> them.</h1>
+            <div class="section-header">
+                <h1 class="section-title small">About - Our Members</h1>
+                <h1 class="section-title title">Meet our people, get to <i>know</i> them.</h1>
             </div>
             <div class="section-content peopleCtr">
                 <div class="grid">

@@ -1,10 +1,10 @@
 // Initialize Rave framework
-import Rave, { Security } from "./Rave/js/Rave.js";
+import Lyra, { Security } from "./Lyra_UI/js/main.js";
 
-const richi = Rave ? new Rave("Lyra UI", "Yuuki and Yuika Project") : null;
-const security = Security ? new Security('1.1', "Keyza Richi") : null;
+const lyra = Lyra ? new Lyra("Lyra UI", "Yuuki and Yuika Project") : null;
+const security = Security ? new Security('1.0', "Lyra") : null;
 
-richi.setHeadTagType("icon", "/assets/logo/lyra.png");
+lyra.setHeadTagType("icon", "/assets/logo/lyra.png");
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -25,10 +25,10 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    richi.setHeadTagType("script", [
+    lyra.setHeadTagType("script", [
         "https://unpkg.com/lenis@1.3.20/dist/lenis.min.js"
     ])
-    richi.setHeadTagType("stylesheet", "https://unpkg.com/lenis@1.3.20/dist/lenis.css")
+    lyra.setHeadTagType("stylesheet", "https://unpkg.com/lenis@1.3.20/dist/lenis.css")
 
     var Lenis = window.Lenis;
     const lenis = new Lenis({

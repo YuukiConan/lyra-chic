@@ -43,6 +43,21 @@ fetch(url).then(response => response.text()).then(html => {
     switchToDarkMode('#toggleTheme', '#cbx', '#themeIcon')
 
 }).finally(() => {
+    const navBtns = document.querySelectorAll('.navigation .navBtn');
+    const currentPath = window.location.pathname;
+
+    navBtns.forEach(btn => {
+        const a = btn.querySelector('a');
+        if (!a) return;
+
+        const href = a.getAttribute('href');
+
+        if (currentPath === href) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    })
     let element = document.querySelectorAll('[data-tooltip]');
 
     const tooltip = document.createElement('div');

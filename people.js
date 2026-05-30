@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
         peopleData = data;
-        console.log(peopleData[0]);
         })
         .catch((e) => console.error("Error fetching people JSON: ", e));
     
@@ -80,13 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeMembers = ["anneta", "crshyle", "jessica", "natalia", "monique", "mae", "charis"];
     let hiddenCounts = 0;
 
-    panel.addEventListener('scroll', () => {
-        if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 2)) {
-            panelHeader.classList.add('scrolled');
-        } else {
-            panelHeader.classList.remove('scrolled');
-        }
-    })
+    // panel.addEventListener('scroll', () => {
+    //     if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) + 500)) {
+    //         panelHeader.classList.add('scrolled');
+    //     } else {
+    //         panelHeader.classList.remove('scrolled');
+    //     }
+    // })
 
     let activeCard = null;
     
@@ -118,12 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
             activeCard = card;
             activeCard.classList.add('focus');
 
-
             nameEl.textContent = person.name;
-            const topbarName = document.querySelector('#people-topbar');
-            if (topbarName) {
-                topbarName.textContent = person.name;
-            }
+
     
             let nickname = person.nickname.replace(/&bull;/g, "/");
             if (!person.aliases?.trim()) {
@@ -158,12 +153,19 @@ document.addEventListener('DOMContentLoaded', () => {
             desc.appendChild(fragment);
     
             const profileImg = panel.querySelector(".people-img img");
+            const bannerImg = panel.querySelector(".people-banner img");
             const link = panel.querySelector(".people-btns a");
     
             if (profileImg) {
                 const image = person.image;
                 profileImg.alt = `${person.name}'s profile picture.`;
                 profileImg.src = image;
+            }
+
+            if (person.banner_image !== ""  || person.banner_image ||bannerImg) {
+                const image = person.banner_image;
+                bannerImg.alt = `${person.name}'s banner image.`;
+                bannerImg.src = image;
             }
     
             if (link) {
@@ -211,10 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function closePanel() {
         requestAnimationFrame(() => {
-            panel.style.animation = 'windows8OutLeft .6s cubic-bezier(0.25, 0.1, 0.25, 1.0)';
+            panel.style.animation = 'fadeOutUpSmooth .6s cubic-bezier(0.25, 0.1, 0.25, 1.0)';
     
             panel.addEventListener('animationend', () => {
-                if (panel.style.animation.includes('windows8OutLeft')) {
+                if (panel.style.animation.includes('fadeOutUpSmooth')) {
                     if (activeCard) {
                         activeCard.classList.remove('focus');
                     }

@@ -1,4 +1,4 @@
-import Rave from "./Rave/js/Rave.js";
+import Rave from "./Lyra_UI/js/main.js";
 
 const richi = Rave ? new Rave("Next 0.5 beta", "keyzarichi.org") : null;
 

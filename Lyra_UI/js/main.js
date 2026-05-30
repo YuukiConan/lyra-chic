@@ -1,32 +1,10 @@
 /// <reference lib="dom" />
 
-/**
- * @summary Rave is a lightweight JavaScript framework for building modern, responsive, and interactive web with ease. Note that it will replace our beloved framework, AirUI.
- */
-export default class Rave {
+export default class Lyra {
     constructor(version, author) {
         this.version = version;
         this.author = author;
     }
-    
-
-    async compressText(text, format = 'gzip') {
-        const blob = new Blob([text]);
-        const stream = blob.stream();
-
-        const compressed = stream.pipeThrough(new CompressionStream(format));
-        const compressBlob = await new Response(compressed).blob();
-
-        const url = URL.createObjectURL(compressBlob);
-
-        document.querySelectorAll('*').forEach(el => {
-            el.setAttribute('data-compressed', url)
-        })
-
-        return await compressBlob.arrayBuffer();
-    }
-
-
 
     /**
      * @param {"script" | "stylesheet" | "icon" | "preload" | "lite"} type - Type of head tag to set.
@@ -441,104 +419,7 @@ export default class Rave {
 
     }
 
-    /**
-     * @deprecated This function is deprecated because of performance issues. Use setCarousel() instead.
-     * @version 1.0
-     */
-    createCarousel(options = {}) {
-        const {
-            carousel = document.querySelector(carousel),
-            items = document.querySelectorAll(items),
-            prev = document.querySelector(prev),
-            next = document.querySelector(next),
-            indicators = document.querySelector(indicators),
-            title = document.getElementById(title),
-            subtitle = document.getElementById(subtitle),
-            duration = 5000
-        } = options;
-
-        let currentIndex = 0;
-        let interval;
-
-        items.forEach((_, index) => {
-            const indicator = document.createElement('div');
-            indicator.dataset.index = index;
-            if (index === 0) {
-                indicator.classList.add('active');
-            }
-            indicators.appendChild(indicator);
-        });
-
-        const divIndicators = document.querySelectorAll(`${indicators} div`);
-
-        function goToItem(index, direction = 'left') {
-            const outIndex = items[currentIndex];
-            const inIndex = items[index];
-
-            divIndicators[currentIndex].classList.remove('active');
-
-            outIndex.classList.add(direction === 'left' ? 'fadeOutLeft' : 'fadeOutRight')
-            inIndex.classList.add(direction === 'left' ? 'fadeInLeft' : 'fadeInRight');
-
-            setTimeout(() => {
-                outIndex.classList.remove('active', 'fadeOutLeft', 'fadeOutRight')
-                inIndex.classList.add('active');
-                inIndex.classList.remove('fadeInLeft', 'fadeInRight');
-
-                currentIndex = index;
-                divIndicators[currentIndex].classList.add('active');
-                updateCaptions();
-            }, duration)
-
-        }
-
-        function updateCaptions() {
-            const currentItem = items[currentIndex];
-            const dataTitle = currentItem.dataset.title;
-            const dataSubtitle = currentItem.dataset.subtitle;
-            title.textContent = dataTitle;
-            subtitle.textContent = dataSubtitle;
-        }
-
-        prev.addEventListener('click', (event) => {
-            event.preventDefault();
-            const newIndex = (currentIndex - 1 + items.length) % items.length;
-            goToItem(newIndex, 'right');
-        });
-
-        next.addEventListener('click', (event) => {
-            event.preventDefault();
-            const newIndex = (currentIndex + 1) % items.length;
-            goToItem(newIndex, 'left');
-
-        });
-
-        divIndicators.forEach(indicator => {
-            indicator.addEventListener('click', () => {
-                const newIndex = Number(indicator.dataset.index);
-                if (newIndex !== currentIndex) {
-                    const direction = newIndex > currentIndex ? 'left' : 'right';
-                    goToItem(newIndex, direction);
-                }
-            });
-        });
-
-        function enableAutoSlide() {
-            interval = setInterval(() => {
-                goToItem((currentIndex + 1) % item.length);
-            }, duration);
-        }
-
-        function disableAutoSlide() {
-            clearInterval(interval);
-        }
-
-        crsl.addEventListener('mouseenter', disableAutoSlide);
-        crsl.addEventListener('mouseleave', enableAutoSlide);
-
-        enableAutoSlide();
-    }
-
+    
     /**
      * @param {string} json Set the JSON files that be used for carousel caption content.
      * @version 1.1
@@ -842,13 +723,13 @@ export default class Rave {
 
 }
 
-export class Security extends Rave {
+export class Security extends Lyra {
     constructor(version, author) {
         super(version, author)
         this.version = version;
         this.author = author;
 
-        console.log(`Rave Security v${this.version} by ${this.author} initialized.`)
+        console.log(`Lyra v${this.version} by ${this.author} initialized.`)
     }
 
     sanitizeHTML(htmlTags) {
@@ -885,37 +766,6 @@ export class Security extends Rave {
         }
 
         return doc.body.innerHTML;
-    }
-
-    /**
-     * @param {string} userName 
-     */
-    getRoleBasedAccessControl(fullName) {
-        const usernames = ['Keyza Richi', 'Yuuki Conan', 'Nathania Anneta', 'Angelina Petra'];
-        const allowRoles = ['view', 'sourcecode', 'dark', 'fullaccess'];
-
-        if (!usernames.includes(fullName)) {
-            throw new Error('Access denied: Unauthorized or unknown user.')
-        } else {
-            if (fullName === usernames[0]) {
-                const setTheirRole = allowRoles[3];
-                console.log(`Access granted to Richi with role ${setTheirRole}.`);
-                return;
-            } else if (fullName === usernames[1]) {
-                const setTheirRole = allowRoles[2];
-                console.log(`Access granted to Yuuki Conan with role ${setTheirRole}.`);
-                return;
-            } else if (fullName === usernames[2] || fullName === usernames[3]) {
-                const setTheirRole = allowRoles[1];
-                console.log(`Access granted to Nia with role ${setTheirRole}.`);
-            } else if (fullName === usernames[4]) {
-                const setTheirRole = allowRoles[2];
-                console.log(`Access granted to Angelina with role ${setTheirRole}.`);
-                return;
-            } else {
-                throw new Error('Access denied: Unauthorized or unknown user.')
-            }
-        }
     }
 
     /**
@@ -974,18 +824,16 @@ export class Security extends Rave {
 }
 
 /**
- *  @type {Rave} 
- *  @param {Rave} instance
- * 
- * 
+ *  @type {Lyra} 
+ *  @param {Lyra} instance
  */
-export class Controller extends Rave {
+export class Controller extends Lyra {
     constructor() {
         super(this.version, this.author);
     }
 }
 
-// Rave Element Handler
+// Handler
 document.querySelectorAll('details').forEach(detail => {
     detail.addEventListener('toggle', () => {
         const content = detail.querySelector('.accordion-content');
